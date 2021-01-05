@@ -1,0 +1,14 @@
+*** MODERN CPP ***
+
+[SOFTWARE]
+* Compiler: MinGW GCC, MSVC
+* IDE: CodeLite, Visual Studio 2019
+
+01-Empty
+02-Constant
+03-Enum
+04-Seperation
+05-Namespace
+06-Exception
+07-StaticAssertion
+08-InitializerList
