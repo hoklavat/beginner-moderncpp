@@ -1,1 +1,59 @@
 *** MODERN CPP ***
+
+[BASIC TERMS]
+* Comment: used as notes by humans that read source code. ignored by compiler.
+* Keyword: reserved keywords those are not available for redefinition or overloading.
+* Escape Sequence: used to represent certain special characters within string literals and character literals.
+* Preprocessor: preprocessing directives control the behavior of preprocessor that is executed at translation phase 4.
+* Header: included source file into current source file.
+* Identifier:  used to name entities.
+* Name: denotes entity is introduced into program by declaration. identifier, overloaded operator, user defined conversion function, user defined literal, template name.
+* Type: restricts operations that are permitted for specific entities and provides semantic meaning otherwise generic sequences of bits.
+* Variable: declared objects and declared references that are not non-static data members.
+* Scope: each name is valid in discontiguous portion of source code called its scope.
+* Lifetime: for any object or reference there is point of execution of program when its lifetime begins and there is moment when it ends.
+* Expression: sequence of operators and their operands that specifies computation.
+* Statement: fragments of program that are executed in sequence.
+* Operator: defines type of operation between operands.
+* Literal: tokens that represent constant values embedded in source code.
+* Declaration: introduce names into program.
+* Definition: declarations that fully define entity introduced by declaration.
+* Initialization: provides initial value of variable at time of construction.
+* Function: entities that associate sequence of statements with name and required parameters.
+* Object: is region of storage that has size, alignment requirement, storage duration, lifetime, type, value, name.
+* Class:  user-defined type that can have data member, member function, nested types, enumerators, member templates.
+* Template:  entity that defines one of the following: family of classes, family of functions, alias to family of types, family of variables, concept.
+* Exception: provides way of transferring control and information from some point in execution of program to handler.
+* Module: help divide large amounts of code into logical parts.
+* Name Lookup: procedure by which name, when encountered in a program, is associated with declaration that introduced it.
+* As If Rule: allows any and all code transformations that do not change observable behavior of program.
+* Undefined Behaviour: renders entire program meaningless if certain rules of language are violated.
+* Memory Model: defines semantics of computer memory storage for purpose of abstract machine.
+* Named Requirements: used in normative text of C++ standard to define expectations of standard library.
+* Feature Testing: defines set of preprocessor macros those are intended as simple and portable way to detect presence of said features.
+* Type Traits: defines compile-time template-based interface to query or modify properties of types.
+* Concept: perform compile-time validation of template arguments and perform function dispatch based on properties of types.
+* Container: generic collection of class templates and algorithms that allow programmers to easily implement common data structures.
+* Iterator: specifies that objects of type can be incremented and dereferenced.
+* Storage Duration: determines how storage for object is allocated and deallocated.
+* Linkage: if name has linkage, it refers to same entity as same name introduced by declaration in another scope.
+
+[C++ ENTITIES]
+* Type
+* Value
+* Reference
+* Object
+* Function
+* Class Member
+* Namespace
+* Template
+* Template Specialization
+* Structured Binding
+* Enumerator
+* Parameter Pack
+
+[NAMES]
+
+[STANDARD LIBRARY]
+
+[PHASES OF TRANSLATION]
