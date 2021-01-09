@@ -6,7 +6,7 @@
 * Escape Sequence: used to represent certain special characters within string literals and character literals.
 * Preprocessor: preprocessing directives control the behavior of preprocessor that is executed at translation phase 4.
 * Header: included source file into current source file.
-* Identifier:  used to name entities.
+* Identifier: used to name entities.
 * Name: denotes entity is introduced into program by declaration. identifier, overloaded operator, user defined conversion function, user defined literal, template name.
 * Type: restricts operations that are permitted for specific entities and provides semantic meaning otherwise generic sequences of bits.
 * Variable: declared objects and declared references that are not non-static data members.
@@ -21,8 +21,8 @@
 * Initialization: provides initial value of variable at time of construction.
 * Function: entities that associate sequence of statements with name and required parameters.
 * Object: is region of storage that has size, alignment requirement, storage duration, lifetime, type, value, name.
-* Class:  user-defined type that can have data member, member function, nested types, enumerators, member templates.
-* Template:  entity that defines one of the following: family of classes, family of functions, alias to family of types, family of variables, concept.
+* Class: user-defined type that can have data member, member function, nested types, enumerators, member templates.
+* Template: entity that defines one of the following: family of classes, family of functions, alias to family of types, family of variables, concept.
 * Exception: provides way of transferring control and information from some point in execution of program to handler.
 * Module: help divide large amounts of code into logical parts.
 * Name Lookup: procedure by which name, when encountered in a program, is associated with declaration that introduced it.
@@ -37,6 +37,13 @@
 * Iterator: specifies that objects of type can be incremented and dereferenced.
 * Storage Duration: determines how storage for object is allocated and deallocated.
 * Linkage: if name has linkage, it refers to same entity as same name introduced by declaration in another scope.
+* Alignment: bytes used to hold object must have proper alignment for hardware to access it efficiently.
+* Block: block is section of code delimited by {} pair.
+* Implementation Defined: each implementation must provide specific, well-defined behavior for construct and that behavior must be documented.
+* Prefix: 
+* Suffix: 
+* LValue: 
+* RValue: 
 
 [C++ ENTITIES]
 * Type
@@ -52,8 +59,44 @@
 * Enumerator
 * Parameter Pack
 
+[FUNDAMENTAL TYPES]
+* Boolean
+* Character
+* Integer
+* Floating-Point
+* Void
+
+[ESCAPE SEQUENCES]
+?
+
+[LITERALS]
+?
+
+[CHARACTER TYPES]
+* char
+* signed char
+* unsigned char
+* wchar_t
+* char16_t
+* char32_t
+
+[SCOPE of NAMES]
+* Local: extends from point of declaration to end of block.
+* Class: extends from opening { of class declaration to end of class declaration.
+* Namespace: extends from point of declaration to end of its namespace.
+* Global: extends from point of declaration to end of file in which its declaration occurs.
+* Statement: extends from point of declaration defined within () to end of its statement.
+* Function: extends from point of declaration until end of function.
+
 [NAMES]
 
 [STANDARD LIBRARY]
 
 [PHASES OF TRANSLATION]
+
+
+[NOTES]
+* prefer {} initialization over alternatives unless you have strong reason not to.
+* prefer = when using auto rather than {} for initialization.
+* size_t is implementation-defined unsigned integer type that can hold size in bytes of every object.
+* for pointers, default value is nullptr.
