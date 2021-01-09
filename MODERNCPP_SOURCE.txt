@@ -19,3 +19,6 @@
 13-StandartIO
 14-Alignment
 15-Scope
+16-TypeDeduction
+17-TypeAlias
+18-Void

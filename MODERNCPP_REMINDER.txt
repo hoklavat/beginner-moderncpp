@@ -42,8 +42,12 @@
 * Implementation Defined: each implementation must provide specific, well-defined behavior for construct and that behavior must be documented.
 * Prefix: 
 * Suffix: 
-* LValue: 
-* RValue: 
+* Has Identity: program has name of pointer or reference to object. (i)
+* Movable: program allowed to move object value to another location and leave this object in valid but unspecified state. (m)
+* LValue: expression that refers to object. something that can be on left-hand side of assignment. lvalue(i&!m) glvalue:generalized(i), xlvalue:extraordinary(i&m).
+* RValue: value that is not lvalue. rvalue(m), prvalue:pure(!i&m)
+* Dereferencing: referring to object pointed to by pointer. indirection.
+* Null Pointer: pointer that does not point to an object. nullptr.
 
 [C++ ENTITIES]
 * Type
@@ -70,7 +74,11 @@
 ?
 
 [LITERALS]
-?
+-STRING-
+* Raw String: R"(...)"
+* UTF8 String: u8"..."
+* UTF16 String: u"..."
+* UTF32 String: U"..."
 
 [CHARACTER TYPES]
 * char
@@ -90,9 +98,18 @@
 
 [NAMES]
 
-[STANDARD LIBRARY]
 
 [PHASES OF TRANSLATION]
+
+
+[STANDARD LIBRARY]
+
+[LIFETIME]
+* Automatic: created when its definition is encountered and destroyed when its name goes out of scope.
+* Static: created and initialized once and lives until program terminates. static and automatic are storage classes.
+* Free Store: objects whose lifetimes are controlled directly with new and delete operations.
+* Temporary Objects: lifetime is determined their use. until reference lifetime or end of full expression.
+* Thread Local Objects: created when their thread is start and destroyed when their thread is end.
 
 
 [NOTES]
@@ -100,3 +117,5 @@
 * prefer = when using auto rather than {} for initialization.
 * size_t is implementation-defined unsigned integer type that can hold size in bytes of every object.
 * for pointers, default value is nullptr.
+* type deduction, auto (defined initializer), decltype (none defined initializer).
+* lifetime of object starts when its constructor completes and ends when its destructor starts executing.
