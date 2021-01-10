@@ -10,6 +10,8 @@
 * Name: denotes entity is introduced into program by declaration. identifier, overloaded operator, user defined conversion function, user defined literal, template name.
 * Type: restricts operations that are permitted for specific entities and provides semantic meaning otherwise generic sequences of bits.
 * Variable: declared objects and declared references that are not non-static data members.
+* Pointer: points to object represents address of first byte in memory occupied by object.
+* Reference: alias for object, is usually implemented to hold machine address of object. alternative name for object. lvalue/const/rvalue references.
 * Scope: each name is valid in discontiguous portion of source code called its scope.
 * Lifetime: for any object or reference there is point of execution of program when its lifetime begins and there is moment when it ends.
 * Expression: sequence of operators and their operands that specifies computation.
@@ -48,6 +50,7 @@
 * RValue: value that is not lvalue. rvalue(m), prvalue:pure(!i&m)
 * Dereferencing: referring to object pointed to by pointer. indirection.
 * Null Pointer: pointer that does not point to an object. nullptr.
+* Structure: aggregate of elements of arbitrary types.
 
 [C++ ENTITIES]
 * Type
@@ -69,6 +72,12 @@
 * Integer
 * Floating-Point
 * Void
+
+[USER DEFINED TYPES]
+* Structure
+* Enumeration
+* Union
+* Class
 
 [ESCAPE SEQUENCES]
 ?

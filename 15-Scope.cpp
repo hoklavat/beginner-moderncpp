@@ -3,11 +3,11 @@
 #include <iostream>
 
 //global
-int x = 4;
+int x{4};
 
 //namespace
 namespace N{
-	int x = 3;
+	int x{3};
 }
 
 //class.
@@ -15,23 +15,23 @@ class C{
 private:
 	int x;
 public:
-	C(){ x = 5;}
+	C(): x{5}{}
 	int getX(){return this->x;}
 };
 
 //function.
 void f(){
-	int x = 7;
+	int x{7};
 	std::cout << "7: x = " << x << std::endl;
 }
 
 int main(){
 	//local.
-	int x = 2;
+	int x{2};
 	
 	{
 		//inner local.
-		int x = 1;
+		int x{1};
 		std::cout << "1: x = " << x << std::endl;
 	}
 	

@@ -4,7 +4,7 @@
 
 template<typename T>
 int* f(T *a){
-	void *p{a}; //increment, decrement, dereference, assignment without casting is prohibited with void pointer.
+	void *p{a}; //increment, dereference, assignment without casting is prohibited with void pointer.
 	int *b{static_cast<int*>(p)};
 	return b;
 }
