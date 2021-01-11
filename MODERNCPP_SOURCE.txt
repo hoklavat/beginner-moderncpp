@@ -26,3 +26,5 @@
 20-Stream
 21-CharToInteger
 22-ConstCorrectness
+23-BitField
+24-Union
