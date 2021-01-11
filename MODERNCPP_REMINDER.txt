@@ -51,6 +51,7 @@
 * Dereferencing: referring to object pointed to by pointer. indirection.
 * Null Pointer: pointer that does not point to an object. nullptr.
 * Structure: aggregate of elements of arbitrary types.
+* Const Correctness: prevent constant objects from getting mutated using const keyword.
 
 [C++ ENTITIES]
 * Type
