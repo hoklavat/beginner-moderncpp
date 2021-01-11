@@ -23,3 +23,6 @@
 17-TypeAlias
 18-Void
 19-Reference
+20-Stream
+21-CharToInteger
+22-ConstCorrectness
