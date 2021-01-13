@@ -13,19 +13,24 @@ int main(){
 	
 	//C++ Style Memory Allocation.
 	int *p2 = new int; //allocate 1 integer initialized with random number.
+	if(p2 == nullptr) throw std::bad_alloc(); //not enough memory.	
 	int *p3 = new int(); //allocate 1 integer initialized with 0.
 	int *p4 = new int(10); //allocate 1 integer initialized with 10.
 	int *p5 = new int[10]; //allocate 10 integers initialized with random numbers.
-	delete[] p2; //doesn't deallocate automatically.
-	delete[] p3;
-	delete[] p4;
+	delete p2; //doesn't deallocate automatically.
+	p2 = nullptr; //deleting same location again could cause crash.
+	delete p3;
+	p3 = nullptr;
+	delete p4;
+	p4 = nullptr;
 	delete[] p5;
+	p5 = nullptr;
 	
 	//C++ Style Pointer Allocation.
 	std::unique_ptr<int> p6 = std::make_unique<int>(10); //automatically deallocated at end of scope.
 	std::unique_ptr<int> p7 = std::make_unique<int>(20);
 	p7 = move(p6);
-	if(p6 == nullptr) std::cout << "p6 is disposed. p7 is " << *p7 << std::endl;
+	if(p6 == nullptr) std::cout << "p6 is disposed. p7 is " << *p7 << std::endl;	
 	
 	//Container Allocation.
 	std::vector<int> v; //automatically deallocated at end of scope.
