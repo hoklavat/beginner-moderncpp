@@ -15,6 +15,7 @@
 * Scope: each name is valid in discontiguous portion of source code called its scope.
 * Lifetime: for any object or reference there is point of execution of program when its lifetime begins and there is moment when it ends.
 * Expression: sequence of operators and their operands that specifies computation.
+* Full Expression: expression that is not subexpression of some other expression.
 * Statement: fragments of program that are executed in sequence.
 * Operator: defines type of operation between operands.
 * Literal: tokens that represent constant values embedded in source code.
@@ -58,6 +59,10 @@
 * Standard Layout Type:
 * Union: struct in which all members are allocated at same address so that it occupies only as much space as its largest member.
 * Enumeration: type that can hold set of integer values specified by user.
+* Promotion: implicit conversion that preserve values. example: long to int.
+* Narrowing Conversion: implicit conversion that can result information loss. example: int to long.
+* Literal Type: class with constexpr constructor.
+* Constant Expression: expression that compiler can evaluate.
 
 [C++ ENTITIES]
 * Type
@@ -85,6 +90,48 @@
 * Enumeration
 * Union
 * Class
+
+[TYPE CONVERSIONS]
+* Function-Style: type(expression)
+* Run-Time Checked: dynamic_cast<type>(expression)
+* Compile-Time Checked: static_cast<type>(expression)
+* Unchecked: reinterpret_cast<type>(expression)
+* Constant: const_cast<type>(expression)
+
+[LEXICAL OPERATORS]
+* Type Identification: typeid(type/expression)
+* Size of Object/Type: sizeof(type/expression)
+* Alignment: alignof(type)
+* Heap Allocation: new
+* Heap Deallocation: delete
+* Throe Exception: throw
+* Don't Throw Exception: noexcept
+
+[TOKENS]
+* Identifier
+* Keyword
+* Character Literal
+* Integer Literal
+* Floating-Point Literal
+* String Literal ("...")
+* Raw String Literal (R"...")
+* Operator
+* Punctuation
+* Preprocessor Notation
+
+[ALTERNATIVE LOGICAL OPERATORS]
+* and (&&)
+* and_eq (&=)
+* bitand (&)
+* bitor (|)
+* compl (~)
+* not (!)
+* not_eq (!=)
+* or (||)
+* or_eq (|=)
+* xor (^)
+* xor_eq (^=)
+
 
 [ESCAPE SEQUENCES]
 ?
@@ -178,3 +225,4 @@ handler:
 * operators && and || will not evaluate their second argument unless doing so is necessary.
 * logical benefits of declaring variables in conditions, doing so also yields the most compact source code.
 * don’t declare variable until you have value to initialize it with.
+* for casting to boolean, nonzero value converts to true, zero value converts to false.
