@@ -1,4 +1,4 @@
-*** MODERN CPP ***
+﻿*** MODERN CPP ***
 
 [BASIC TERMS]
 * Comment: used as notes by humans that read source code. ignored by compiler.
@@ -59,10 +59,14 @@
 * Standard Layout Type:
 * Union: struct in which all members are allocated at same address so that it occupies only as much space as its largest member.
 * Enumeration: type that can hold set of integer values specified by user.
+<<<<<<< HEAD
 * Promotion: implicit conversion that preserve values. example: long to int.
 * Narrowing Conversion: implicit conversion that can result information loss. example: int to long.
 * Literal Type: class with constexpr constructor.
 * Constant Expression: expression that compiler can evaluate.
+=======
+* Handle: technique that will uniquely identify and get to another object.
+>>>>>>> f3dfdc6e0a9b26def3497cb6e913308fc16241e9
 
 [C++ ENTITIES]
 * Type
@@ -134,7 +138,26 @@
 
 
 [ESCAPE SEQUENCES]
-?
+* Simple Escape Sequences
+   - \' - single quote
+   - \" - double quote
+   - \? - question mark
+   - \\ - backslash
+   - \a - audible bell
+   - \b - backspace
+   - \f - form feed
+   - \n - line feed
+   - \r - carriage return
+   - \t - horizontal tab
+   - \v - vertical tab
+* Numeric Escape Sequences
+   - \nnn - arbitrary octal value
+   - \xnn - arbitrary hexadecimal value
+* Conditional Escape Sequences
+   - \c - Implementation-defined
+* Universal Character Names
+   - \unnnn - arbitrary Unicode value;
+   - \Unnnnnnnn - arbitrary Unicode value;
 
 [LITERALS]
 -STRING-
@@ -184,13 +207,13 @@
    - for(for-init-declaration : expression) statement
 * statement-list:
    - statement statement-listopt
-condition:
+* condition:
    - expression
    - type-specifier declarator = expression
    - type-specifier declarator {expression}
-handler-list:
+* handler-list:
    - handler handler-list
-handler:
+* handler:
    - catch(exception-declaration){statement-list}
 
 [NAMES]
@@ -203,7 +226,6 @@ handler:
 
 [PHASES OF TRANSLATION]
 
-
 [STANDARD LIBRARY]
 
 [LIFETIME]
@@ -212,7 +234,6 @@ handler:
 * Free Store: objects whose lifetimes are controlled directly with new and delete operations.
 * Temporary Objects: lifetime is determined their use. until reference lifetime or end of full expression.
 * Thread Local Objects: created when their thread is start and destroyed when their thread is end.
-
 
 [NOTES]
 * prefer {} initialization over alternatives unless you have strong reason not to.
@@ -225,4 +246,9 @@ handler:
 * operators && and || will not evaluate their second argument unless doing so is necessary.
 * logical benefits of declaring variables in conditions, doing so also yields the most compact source code.
 * don’t declare variable until you have value to initialize it with.
+<<<<<<< HEAD
 * for casting to boolean, nonzero value converts to true, zero value converts to false.
+=======
+* reference can’t be separated from referent.
+* if you don’t want to change object passed and it is big, call by const reference.
+>>>>>>> f3dfdc6e0a9b26def3497cb6e913308fc16241e9

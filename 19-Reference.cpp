@@ -7,6 +7,10 @@ void f(int &r){
 	r++;
 }
 
+int& g(int &r){
+	return r;
+}
+
 int main(){
 	//L-Value Reference
 	int a{1};
@@ -24,6 +28,9 @@ int main(){
 	std::cout << "p = " << p << std::endl;
 	
 	f(a);
+	std::cout << "a = " << a << std::endl;
+	
+	g(a) = 10;
 	std::cout << "a = " << a << std::endl;
 	
 	//R-Value Reference

@@ -10,11 +10,22 @@ public:
 	}
 };
 
+class Error: public std::exception{
+public:
+	Error(): exception(){}
+};
+
 int main(){
+	
 	try{
-		C c{15};
+		//C c{15};
+		if(1 == 1) throw Error();
 	}
 	catch(std::out_of_range){
-		std::cout << "Exception occured.\n";
+		std::cout << "Exception occured." << std::endl;
 	}
+	catch(Error){
+		std::cout << "Error occured." << std::endl;
+	}
+	
 }
