@@ -59,14 +59,11 @@
 * Standard Layout Type:
 * Union: struct in which all members are allocated at same address so that it occupies only as much space as its largest member.
 * Enumeration: type that can hold set of integer values specified by user.
-<<<<<<< HEAD
 * Promotion: implicit conversion that preserve values. example: long to int.
 * Narrowing Conversion: implicit conversion that can result information loss. example: int to long.
 * Literal Type: class with constexpr constructor.
 * Constant Expression: expression that compiler can evaluate.
-=======
 * Handle: technique that will uniquely identify and get to another object.
->>>>>>> f3dfdc6e0a9b26def3497cb6e913308fc16241e9
 
 [C++ ENTITIES]
 * Type
@@ -135,7 +132,6 @@
 * or_eq (|=)
 * xor (^)
 * xor_eq (^=)
-
 
 [ESCAPE SEQUENCES]
 * Simple Escape Sequences
@@ -246,9 +242,6 @@
 * operators && and || will not evaluate their second argument unless doing so is necessary.
 * logical benefits of declaring variables in conditions, doing so also yields the most compact source code.
 * don’t declare variable until you have value to initialize it with.
-<<<<<<< HEAD
 * for casting to boolean, nonzero value converts to true, zero value converts to false.
-=======
 * reference can’t be separated from referent.
 * if you don’t want to change object passed and it is big, call by const reference.
->>>>>>> f3dfdc6e0a9b26def3497cb6e913308fc16241e9
