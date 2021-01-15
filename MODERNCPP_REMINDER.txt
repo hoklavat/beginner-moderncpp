@@ -68,6 +68,9 @@
 * Semantics: study of meaning. relationship between form and meaning.
 * Syntax: set of rules, principles, and processes that govern structure of sentences in language.
 * Lexical Analysis: process of converting sequence of characters into sequence of tokens.
+* Constructor: builds objects from predefined types.
+* Default Constructor: constructor that can be called with no arguments, or that can take arguments, provided they are given default values.
+* Named Constructor: provide public static methods that return object.
 
 [C++ ENTITIES]
 * Type
@@ -249,3 +252,4 @@
 * for casting to boolean, nonzero value converts to true, zero value converts to false.
 * reference can’t be separated from referent.
 * if you don’t want to change object passed and it is big, call by const reference.
+* order dependency: order of member objects in class body is critical. order of initializers in constructor initialization list is irrelevant.
