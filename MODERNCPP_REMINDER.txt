@@ -64,6 +64,10 @@
 * Literal Type: class with constexpr constructor.
 * Constant Expression: expression that compiler can evaluate.
 * Handle: technique that will uniquely identify and get to another object.
+* Encapsulation: preventing unauthorized access to some piece of information or functionality.
+* Semantics: study of meaning. relationship between form and meaning.
+* Syntax: set of rules, principles, and processes that govern structure of sentences in language.
+* Lexical Analysis: process of converting sequence of characters into sequence of tokens.
 
 [C++ ENTITIES]
 * Type
