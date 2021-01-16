@@ -4,6 +4,20 @@
 #include <memory>
 #include <vector>
 
+void f(){
+	std::vector<char*> v;
+	try{
+		while(true){
+			char *p = new char[10000]; //new(std::nothrow) char[10000]. returns nullptr rather throwing exception.
+			v.push_back(p);
+			p[0] = 'x';
+		}
+	}
+	catch(std::bad_alloc){ //new throws exception if there is not enough memory.
+		std::cerr << "Memory exhausted" << std::endl;
+	}
+}
+
 int main(){
 	
 	//C Style Memory Allocation.
@@ -36,4 +50,6 @@ int main(){
 	std::vector<int> v; //automatically deallocated at end of scope.
 	for(int i = 0; i < 10; ++i)
 		v.push_back(i*10);
+	
+	f();
 }

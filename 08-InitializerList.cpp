@@ -1,6 +1,7 @@
 //08-InitializerList
 
 #include <iostream>
+#include <vector>
 
 class C{
 public:
@@ -15,4 +16,9 @@ public:
 int main(){
 	C c{1, 2, 3};
 	std::cout << c.data[0] << std::endl;
+	
+	const std::initializer_list<int> l{0, 1, 2};
+	std::vector<int> v(l);
+	for(auto n: l)
+		std::cout << n << ":" << v[n] << " ";
 }

@@ -43,8 +43,8 @@
 * Alignment: bytes used to hold object must have proper alignment for hardware to access it efficiently.
 * Block: block is section of code delimited by {} pair.
 * Implementation Defined: each implementation must provide specific, well-defined behavior for construct and that behavior must be documented.
-* Prefix: 
-* Suffix: 
+* Prefix: affix which is placed before stem of word.
+* Suffix: affix which is placed after stem of word.
 * Has Identity: program has name of pointer or reference to object. (i)
 * Movable: program allowed to move object value to another location and leave this object in valid but unspecified state. (m)
 * LValue: expression that refers to object. something that can be on left-hand side of assignment. lvalue(i&!m) glvalue:generalized(i), xlvalue:extraordinary(i&m).
@@ -65,12 +65,18 @@
 * Constant Expression: expression that compiler can evaluate.
 * Handle: technique that will uniquely identify and get to another object.
 * Encapsulation: preventing unauthorized access to some piece of information or functionality.
-* Semantics: study of meaning. relationship between form and meaning.
-* Syntax: set of rules, principles, and processes that govern structure of sentences in language.
-* Lexical Analysis: process of converting sequence of characters into sequence of tokens.
+* Lexical Analysis: process of converting sequence of characters into sequence of tokens. takes modified source code from language preprocessors that are written in form of sentences. 
+breaks these syntaxes into series of tokens, by removing any whitespace or comments in source code.
+* Syntax Analysis: Parsing. set of rules, principles, and processes that govern structure of sentences in language. takes input from lexical analyzer in form of token streams and analyzes source code (token stream) 
+against production rules to detect errors in code.
+* Semantic Analysis: study of meaning. relationship between form and meaning. interpret symbols, their types, and their relations with each other. judges whether syntax structure constructed in source program derives 
+any meaning or not.
 * Constructor: builds objects from predefined types.
 * Default Constructor: constructor that can be called with no arguments, or that can take arguments, provided they are given default values.
 * Named Constructor: provide public static methods that return object.
+* RAII: Resource Acquisition Is Initialization. when object is constructed on free store, its pointer placed into manager object with destructor that will destroy it. 
+this method avoids resource leaks and making error handling using exceptions simple and safe.
+* Lambda Expression: simplified notation for defining and using anonymous function object. useful when passing operation as argument to algorithm. example: callback in gui applications.
 
 [C++ ENTITIES]
 * Type
@@ -226,6 +232,14 @@
    - user-defined conversion function name,
    - user-defined literal operator name,
    - template name followed by its argument list.
+
+[LAMBDA EXPRESSIONS]
+* Capture List: name specification.
+* Parameter List: argument specification.
+* mutable Specifier: body may modify state. default is const.
+* noexcept Specifier: don't throw exception.
+* Body: code specification.
+* Return Type: ->
 
 [PHASES OF TRANSLATION]
 
