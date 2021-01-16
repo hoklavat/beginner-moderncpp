@@ -26,6 +26,8 @@
 * Object: is region of storage that has size, alignment requirement, storage duration, lifetime, type, value, name.
 * Class: user-defined type that can have data member, member function, nested types, enumerators, member templates.
 * Template: entity that defines one of the following: family of classes, family of functions, alias to family of types, family of variables, concept.
+* Variadic Template: allows to handle arbitrary number of arbitrary types.
+* Initializer List: allows to handle arbitrary number of arguments of single type.
 * Exception: provides way of transferring control and information from some point in execution of program to handler.
 * Module: help divide large amounts of code into logical parts.
 * Name Lookup: procedure by which name, when encountered in a program, is associated with declaration that introduced it.
@@ -65,12 +67,11 @@
 * Constant Expression: expression that compiler can evaluate.
 * Handle: technique that will uniquely identify and get to another object.
 * Encapsulation: preventing unauthorized access to some piece of information or functionality.
-* Lexical Analysis: process of converting sequence of characters into sequence of tokens. takes modified source code from language preprocessors that are written in form of sentences. 
-breaks these syntaxes into series of tokens, by removing any whitespace or comments in source code.
-* Syntax Analysis: Parsing. set of rules, principles, and processes that govern structure of sentences in language. takes input from lexical analyzer in form of token streams and analyzes source code (token stream) 
-against production rules to detect errors in code.
-* Semantic Analysis: study of meaning. relationship between form and meaning. interpret symbols, their types, and their relations with each other. judges whether syntax structure constructed in source program derives 
-any meaning or not.
+* Lexical Analysis: process of converting sequence of characters into sequence of tokens. takes modified source code from language preprocessors that are written in form of sentences. breaks these syntaxes into series of tokens, by
+ removing any whitespace or comments in source code.
+* Syntax Analysis: Parsing. set of rules, principles, and processes that govern structure of sentences in language. takes input from lexical analyzer in form of token streams and analyzes source code (token stream) against production
+ rules to detect errors in code.
+* Semantic Analysis: study of meaning. relationship between form and meaning. interpret symbols, their types, and their relations with each other. judges whether syntax structure constructed in source program derives any meaning or not.
 * Constructor: builds objects from predefined types.
 * Default Constructor: constructor that can be called with no arguments, or that can take arguments, provided they are given default values.
 * Named Constructor: provide public static methods that return object.
@@ -78,6 +79,8 @@ any meaning or not.
 this method avoids resource leaks and making error handling using exceptions simple and safe.
 * Lambda Expression: simplified notation for defining and using anonymous function object. useful when passing operation as argument to algorithm. example: callback in gui applications.
 * Casting: explicit type conversion.
+* Inline Function: compiler attempts to generate code for a call of function inline rather than laying down code for function once and then calling through usual function call mechanism.
+* One Definition Rule: ODR. definitions in different translation units must be identical.
 
 [C++ ENTITIES]
 * Type
@@ -248,6 +251,13 @@ this method avoids resource leaks and making error handling using exceptions sim
 * Body: code specification.
 * Return Type: ->
 
+[FUNCTION SPECIFIERS]
+* virtual: function can be overridden in derived class.
+* override: function must be overriding virtual function from base class.
+* final: function cannot be overriden in derived class.
+* static: function is not associated with particular object.
+* const: function may not modify its object.
+
 [PHASES OF TRANSLATION]
 
 [STANDARD LIBRARY]
@@ -276,4 +286,9 @@ this method avoids resource leaks and making error handling using exceptions sim
 * order dependency: order of member objects in class body is critical. order of initializers in constructor initialization list is irrelevant.
 * lambda’s return type is type of return’s expression.
 * prefer prefix ++ over suffix ++.
-* ehen explicit type conversion is necessary, prefer named cast.
+* when explicit type conversion is necessary, prefer named cast.
+* constant expression function consist of single return-statement; no branching, no loops and no local variables, no side effects are allowed. writing to nonlocal objects is not possible, but referring to them is allowed.
+* placing [[noreturn]] at start of function declaration indicates that function is not expected to return.
+* static local variable allows function to preserve information between calls without introducing global variable that might be accessed and corrupted by other functions.
+* use pass-by-const-reference to pass large values that you don’t need to modify.
+* 

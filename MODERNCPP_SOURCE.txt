@@ -34,3 +34,6 @@
 29-LambdaExpression
 30-CustomCast
 31-NamedCast
+32-SuffixReturn
+33-InlineFunction
+34-DefaultConstructor
