@@ -32,3 +32,5 @@
 27-NamedConstructor
 28-DeskCalculator
 29-LambdaExpression
+30-CustomCast
+31-NamedCast
