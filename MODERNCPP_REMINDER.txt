@@ -81,6 +81,7 @@ this method avoids resource leaks and making error handling using exceptions sim
 * Casting: explicit type conversion.
 * Inline Function: compiler attempts to generate code for a call of function inline rather than laying down code for function once and then calling through usual function call mechanism.
 * One Definition Rule: ODR. definitions in different translation units must be identical.
+* Overloading: using same name for operations on different types is called overloading.
 
 [C++ ENTITIES]
 * Type
@@ -258,6 +259,19 @@ this method avoids resource leaks and making error handling using exceptions sim
 * static: function is not associated with particular object.
 * const: function may not modify its object.
 
+[PREDEFINED MACROS]
+* __cplusplus: defined in a C++ compilation and not in C compilation.
+* __DATE__: date in ‘‘yyyy:mm:dd’’ format.
+* __TIME__: time in ‘‘hh:mm:ss’’ format.
+* __FILE__: name of current source file.
+* __LINE__: source line number within current source file.
+* __FUNC__: implementation-defined C-style string naming current function.
+* __STDC_HOSTED__: 1 if implementation is hosted; otherwise 0.
+* __STDC__: defined in C compilation and not in a C++ compilation.
+* __STDC_MB_MIGHT_NEQ_WC__: 1 if in encoding for wchar_t, member of basic character set might have code value that differs from its value as ordinary character literal.
+* __STDCPP_STRICT_POINTER_SAFETY__: 1 if implementation has strict pointer safety otherwise undefined.
+* __STDCPP_THREADS__: 1 if program can have more than one thread of execution; otherwise undefined.
+
 [PHASES OF TRANSLATION]
 
 [STANDARD LIBRARY]
@@ -288,7 +302,10 @@ this method avoids resource leaks and making error handling using exceptions sim
 * prefer prefix ++ over suffix ++.
 * when explicit type conversion is necessary, prefer named cast.
 * constant expression function consist of single return-statement; no branching, no loops and no local variables, no side effects are allowed. writing to nonlocal objects is not possible, but referring to them is allowed.
-* placing [[noreturn]] at start of function declaration indicates that function is not expected to return.
+* if function cannot return, mark it [[noreturn]].
 * static local variable allows function to preserve information between calls without introducing global variable that might be accessed and corrupted by other functions.
 * use pass-by-const-reference to pass large values that you don’t need to modify.
-* 
+* functions declared in different non-namespace scopes do not overload.
+* don’t use macros unless you have to.
+* function should perform single logical operation.
+* if function may have to be evaluated at compile time, declare it constexpr.
