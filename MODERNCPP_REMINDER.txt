@@ -309,4 +309,13 @@ this method avoids resource leaks and making error handling using exceptions sim
 * don’t use macros unless you have to.
 * function should perform single logical operation.
 * if function may have to be evaluated at compile time, declare it constexpr.
+<<<<<<< HEAD
 * it is typically important that resources are released in reverse order of their acquisition.
+=======
+* static members must be defined explicitly.
+* Construct On First Use Idiom: object is constructed on its first use. uses pointer.
+* Nifty Counter Idiom: 
+* it’s always portable and safe to change static data member into static member function.
+* Named Parameter Idiom: change function’s parameters to methods of newly created class, where all these methods return *this by reference.
+* explicit is optional keyword to tell compiler that certain constructor or conversion operator may not be used to implicitly cast expression to its class type.
+>>>>>>> 83d9c853992d9bc28717f1bf9b096df2ab686959
