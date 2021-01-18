@@ -11,20 +11,18 @@ private:
 	friend class D;
 public:
 	C(int x): a1{x}, a2{0}, a3{0}{}	
-	C& A1(){a1=1;}
-	C& A2(){a2=2;}	
-	C& A3(){a3=3;}
+	C& A1(int x){a1=x;return *this;}
+	C& A2(int x){a2=x;return *this;}	
+	C& A3(int x){a3=x;return *this;}
 };
 
 class D{
 public:
 	D(const C& params){
-		std::cout << params.a1 << std::endl;
-		std::cout << params.a2 << std::endl;
-		std::cout << params.a3 << std::endl;
+		std::cout << params.a1 << "," << params.a2 << "," << params.a3 << std::endl;
 	}
 };
 
 int main(){
-	D d = C(10).A3().A1().A2(); //parameter order is unimportant.
+	D d = C(10).A3(2).A1(4).A2(6); //parameter order is unimportant.
 }
