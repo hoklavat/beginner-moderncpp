@@ -309,3 +309,4 @@ this method avoids resource leaks and making error handling using exceptions sim
 * don’t use macros unless you have to.
 * function should perform single logical operation.
 * if function may have to be evaluated at compile time, declare it constexpr.
+* it is typically important that resources are released in reverse order of their acquisition.
