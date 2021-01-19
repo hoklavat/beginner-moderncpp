@@ -317,3 +317,7 @@
 * derived class destructor automatically invokes destructors for base class subobjects.
 * self-assignment is not valid for move assignment.
 * none overloadable operators are; .  ::  ?:  sizeof
+* stack unwinding: process of passing the exception up stack from point of throw to handler.
+* rethrow is indicated by throw without operand.
+* constructor itself can catch sexceptions by enclosing complete function body,including member initializer list, in try-block.
+* destructor should never throw exception.
