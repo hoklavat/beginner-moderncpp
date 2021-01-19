@@ -316,3 +316,5 @@ this method avoids resource leaks and making error handling using exceptions sim
 * it’s always portable and safe to change static data member into static member function.
 * Named Parameter Idiom: change function’s parameters to methods of newly created class, where all these methods return *this by reference.
 * explicit is optional keyword to tell compiler that certain constructor or conversion operator may not be used to implicitly cast expression to its class type.
+* class destructor automatically invokes destructors for member objects.
+* derived class destructor automatically invokes destructors for base class subobjects.

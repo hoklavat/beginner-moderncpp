@@ -51,5 +51,13 @@ int main(){
 	for(int i = 0; i < 10; ++i)
 		v.push_back(i*10);
 	
-	f();
+	//Not Enough Memory Exception.
+	//f();
+	
+	//Placement New.
+	char memory[sizeof(char)*24];
+	void* place = memory;
+	int *i = new(place) int; //memory is char. i is int.
+	i[0] = 0x4243; //0x42='B', 0x43='C'.
+	std::cout << memory[0] << "-" << memory[1] << std::endl;
 }
