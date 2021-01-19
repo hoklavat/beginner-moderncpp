@@ -319,3 +319,4 @@ this method avoids resource leaks and making error handling using exceptions sim
 * class destructor automatically invokes destructors for member objects.
 * derived class destructor automatically invokes destructors for base class subobjects.
 * self-assignment is not valid for move assignment.
+* none overloadable operators are; .  ::  ?:  sizeof
