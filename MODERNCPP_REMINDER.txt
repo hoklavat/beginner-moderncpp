@@ -318,3 +318,4 @@ this method avoids resource leaks and making error handling using exceptions sim
 * explicit is optional keyword to tell compiler that certain constructor or conversion operator may not be used to implicitly cast expression to its class type.
 * class destructor automatically invokes destructors for member objects.
 * derived class destructor automatically invokes destructors for base class subobjects.
+* self-assignment is not valid for move assignment.
