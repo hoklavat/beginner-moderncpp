@@ -12,7 +12,8 @@ public:
 		data = new int[s];
 	}
 	
-	//Copy Constructor.
+	//Copy Constructor.	
+	//A(const A&) = delete; //prohibit copying.
 	A(const A& a): data{new int[a.size]}, size{a.size}{
 		for(int i = 0; i < a.size; i++)
 			data[i] = a.data[i];
