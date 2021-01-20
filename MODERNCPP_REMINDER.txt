@@ -79,6 +79,8 @@
 * Inline Function: compiler attempts to generate code for a call of function inline rather than laying down code for function once and then calling through usual function call mechanism.
 * One Definition Rule: ODR. definitions in different translation units must be identical.
 * Overloading: using same name for operations on different types is called overloading.
+* Friend: function or class that is allowed to access to another class or function.
+
 
 [C++ ENTITIES]
 * Type
@@ -321,3 +323,5 @@
 * rethrow is indicated by throw without operand.
 * constructor itself can catch sexceptions by enclosing complete function body,including member initializer list, in try-block.
 * destructor should never throw exception.
+* ++i is sometimes faster than, and is never slower than, i++.
+* friend of friend isn’t necessarily friend.
