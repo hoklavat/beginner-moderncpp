@@ -325,3 +325,4 @@
 * destructor should never throw exception.
 * ++i is sometimes faster than, and is never slower than, i++.
 * friend of friend isn’t necessarily friend.
+* private: member/friend, protected: member/friend/derived, public: everyone.
