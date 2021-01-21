@@ -326,3 +326,9 @@
 * ++i is sometimes faster than, and is never slower than, i++.
 * friend of friend isn’t necessarily friend.
 * private: member/friend, protected: member/friend/derived, public: everyone.
+* prefer compile-time checking to run-time checking.
+* prefer standard library rather than implementing same function again.
+* use span to prevent array decay and range errors.
+* use narrow, narrow_cast for narrowing conversions.
+* prefer templates instead of casting if possible.
+* use variant rather than union.
