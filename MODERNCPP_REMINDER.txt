@@ -80,7 +80,11 @@
 * One Definition Rule: ODR. definitions in different translation units must be identical.
 * Overloading: using same name for operations on different types is called overloading.
 * Friend: function or class that is allowed to access to another class or function.
-
+* Static Typing: legality of member function invocation is checked at earliest possible moment by compiler at compile time. 
+* Dynamic Binding: member function is selected dynamically (at run-time) based on type of object, not type of pointer/reference to that object.
+* Pure Virtual Function: function that must be overridden in derived class and need not be defined.
+* Abstract Class: no objects of class can be directly created. 
+* Interface: class with no data and where all member functions are pure virtual functions.
 
 [C++ ENTITIES]
 * Type
@@ -332,3 +336,6 @@
 * use narrow, narrow_cast for narrowing conversions.
 * prefer templates instead of casting if possible.
 * use variant rather than union.
+* if pure virtual function is not overridden in derived class, derived class also becomes abstract.
+* non-virtual member functions are resolved statically. (at compile time)
+* virtual member functions are resolved dynamically. (at run-time)
