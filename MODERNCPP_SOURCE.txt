@@ -38,3 +38,7 @@
 33-InlineFunction
 34-DefaultConstructor
 35-FunctionPointer
+36-Constructor
+37-NamedParameters
+38-ProtectedAccess
+39-Inheritance
