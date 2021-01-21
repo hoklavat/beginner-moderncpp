@@ -85,6 +85,7 @@
 * Pure Virtual Function: function that must be overridden in derived class and need not be defined.
 * Abstract Class: no objects of class can be directly created. 
 * Interface: class with no data and where all member functions are pure virtual functions.
+* Argument Dependent Lookup: if function isn’t found in context of its use, it is looked in namespaces of its arguments.
 
 [C++ ENTITIES]
 * Type
