@@ -6,10 +6,11 @@ struct S{
 	char x;
 	int y;
 	double z;
+	//char x;
 };
 
 struct T{
-	//char a; //not properly aligned. 24 bytes total.
+	//char a; //non-proper alignment. 24 bytes total.
 	double x;
 	int y;
 	char z;

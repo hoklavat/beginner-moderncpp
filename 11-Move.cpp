@@ -10,9 +10,10 @@ private:
 public:
 	A(int s): size{s}{
 		data = new int[s];
+		fill(1);
 	}
 	
-	~A(){};
+	~A(){}; //destructor would prevent implicit move constructor for derived classes.
 	
 	//Move Constructor.
 	A(A&& a): data{a.data}, size{a.size}{
@@ -25,7 +26,7 @@ public:
 	A& operator=(A&& a){
 		std::cout << "move assignment." << std::endl;
 		data = a.data;
-		size = a.size;	
+		size = a.size;
 		a.data = nullptr;
 		a.size = 0;
 		return *this;
@@ -41,14 +42,16 @@ public:
 		for(int i = 0; i < size; ++i){
 			std::cout << data[i] << " ";
 		}
+		std::cout << std::endl;
 	}
 };
 
 int main(){
-	A a(10);
-	a.fill(10);
+	A a{5};
+	a.fill(15);
+	a.print();
 	
-	A b(10);
-	b = std::move(a);
+	A b = std::move(a);
 	b.print();
+	a.print(); //empty.
 }
