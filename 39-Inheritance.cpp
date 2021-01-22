@@ -13,8 +13,7 @@ public:
 class A: public O{
 public:
 	A(){std::cout << "Base Class constructor." << std::endl;}
-	~A(){std::cout << "Base Class destructor." << std::endl;}
-	
+	~A(){std::cout << "Base Class destructor." << std::endl;}	
 	virtual void f() = 0; //pure virtual function should be implemented in derived class. otherwise it is also abstract.
 	virtual void g(){std::cout << "Base Class g function." << std::endl;}
 };
@@ -22,14 +21,11 @@ public:
 class B: public A{
 public:
 	B(){std::cout << "Derived Class constructor." << std::endl;}
-	~B(){std::cout << "Derived Class destructor." << std::endl;}
-	
+	~B(){std::cout << "Derived Class destructor." << std::endl;}	
 	void f(){std::cout << "Derived Class f function." << std::endl;}
-	void g() override{std::cout << "Derived Class g function." << std::endl;}
-	
+	void g() override{std::cout << "Derived Class g function." << std::endl;}	
 	B* clone() const{return new B(*this);}
-	B* create() const{return new B();}
-	
+	B* create() const{return new B();}	
 	int a{};
 };
 
