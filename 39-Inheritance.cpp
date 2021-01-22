@@ -13,7 +13,7 @@ public:
 class A: public O{
 public:
 	A(){std::cout << "Base Class constructor." << std::endl;}
-	~A(){std::cout << "Base Class destructor." << std::endl;}	
+	~A(){std::cout << "Base Class destructor." << std::endl;}
 	virtual void f() = 0; //pure virtual function should be implemented in derived class. otherwise it is also abstract.
 	virtual void g(){std::cout << "Base Class g function." << std::endl;}
 };

@@ -12,7 +12,7 @@ private:
 public:
 	C(int x): a1{x}, a2{0}, a3{0}{}	
 	C& A1(int x){a1=x;return *this;}
-	C& A2(int x){a2=x;return *this;}	
+	C& A2(int x){a2=x;return *this;}
 	C& A3(int x){a3=x;return *this;}
 };
 
