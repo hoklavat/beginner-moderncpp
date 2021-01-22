@@ -1,5 +1,5 @@
 //06-Exception
-//report errors found at run time.
+//error checking at run-time.
 
 #include <iostream>
 
@@ -21,10 +21,10 @@ int main(){
 		//C c{15};
 		if(1 == 1) throw Error();
 	}
-	catch(std::out_of_range){
+	catch(std::out_of_range){ //built-in exception class.
 		std::cout << "Exception occured." << std::endl;
 	}
-	catch(Error){
+	catch(Error){ //user-defined exception class.
 		std::cout << "Error occured." << std::endl;
 	}
 	

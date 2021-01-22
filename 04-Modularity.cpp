@@ -1,5 +1,5 @@
 //04-Modularity
-//declaration and implementation are seperated into different files.
+//declaration and implementation are seperated.
 
 //class.h
 class C{

@@ -2,33 +2,19 @@
 
 #include <iostream>
 
-//Interface/Abstract Class/Super Class/Base Class.
+//interface/abstract class/super class/base class.
 class A{
-public:
-	//Pure Virtual Function.
-	virtual void f() = 0;
-	
-	//Virtual Destructor.
-	virtual ~A(){
-		std::cout << "A - destructor." << std::endl;
-	} 
+public:	
+	virtual void f() = 0; //pure virtual function.
+	virtual ~A(){std::cout << "A - destructor." << std::endl;} //virtual destructor.
 };
 
-//Concrete Class/Sub Class/Derived Class.
+//concrete class/sub class/derived class.
 class B: public A{
 public:
-	B(){
-		std::cout << "B - constructor." << std::endl;
-	}
-	
-	~B(){
-		std::cout << "B - destructor." << std::endl;
-	}
-	
-	//Override.
-	void f(){
-		std::cout << "Hello World!" << std::endl;
-	}
+	B(){std::cout << "B - constructor." << std::endl;}	
+	~B(){std::cout << "B - destructor." << std::endl;}	
+	void f(){std::cout << "Hello World!" << std::endl;} //override.
 };
 
 int main(){

@@ -1,4 +1,5 @@
 //10-Copy
+//create copy of object in constructor.
 
 #include <iostream>
 
@@ -10,16 +11,17 @@ private:
 public:
 	A(int s): size{s}{
 		data = new int[s];
-	}
+	}	
 	
-	//Copy Constructor.	
-	//A(const A&) = delete; //prohibit copying.
+	//A(const A&) = delete; //restrain copy constructor.
+	
+	//copy constructor.
 	A(const A& a): data{new int[a.size]}, size{a.size}{
 		for(int i = 0; i < a.size; i++)
 			data[i] = a.data[i];
 	}
 	
-	//Copy Assignment.
+	//copy assignment operator.
 	A& operator=(const A& a){
 		int *p = new int[a.size];
 		for(int i = 0; i < a.size; i++)
@@ -50,8 +52,14 @@ int main(){
 	
 	std::cout << std::endl;
 	
-	A b(a);
+	A b(a); //create copy of a.
 	b.print();
+	
+	std::cout << std::endl;
+	
+	A c(5);
+	c = a; //copy assignment.
+	c.print();
 	
 	std::cout << std::endl;
 	
