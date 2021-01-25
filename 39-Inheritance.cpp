@@ -7,7 +7,7 @@ public:
 	O(){std::cout << "Interface constructor." << std::endl;}
 	virtual ~O(){std::cout << "Interface destructor." << std::endl;}
 	virtual O* create() const = 0;
-	virtual O* clone() const = 0;
+	virtual O* clone() const = 0; //virtual copy constructor.
 };
 
 class A: public O{
