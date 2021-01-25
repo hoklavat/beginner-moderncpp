@@ -77,7 +77,7 @@
 * Lambda Expression: simplified notation for defining and using anonymous function object. useful when passing operation as argument to algorithm. example: callback in gui applications.
 * Casting: explicit type conversion.
 * Inline Function: compiler attempts to generate code for a call of function inline rather than laying down code for function once and then calling through usual function call mechanism.
-* One Definition Rule: ODR. definitions in different translation units must be identical.
+* One Definition Rule: ODR. there must be exactly one definition. definitions in different translation units must be identical.
 * Overloading: using same name for operations on different types is called overloading.
 * Friend: function or class that is allowed to access to another class or function.
 * Static Typing: legality of member function invocation is checked at earliest possible moment by compiler at compile time. 
@@ -86,6 +86,12 @@
 * Abstract Class: no objects of class can be directly created. 
 * Interface: class with no data and where all member functions are pure virtual functions.
 * Argument Dependent Lookup: if function isn’t found in context of its use, it is looked in namespaces of its arguments.
+* Translation Unit: unit is what compiler proper works on and what C++ language rules describe.
+* Linker: loader. program that binds together separately compiled parts.
+* External Linkage: name that can be used in translation units different from one in which it was defined. extern.
+* Internal Linkage: name that can be referred to only in translation unit in which it is defined. not accessible from other source files. static.
+* No Linkage: names that linker does not see, such as names of local variables.
+
 
 [C++ ENTITIES]
 * Type
@@ -287,6 +293,14 @@
 * Temporary Objects: lifetime is determined their use. until reference lifetime or end of full expression.
 * Thread Local Objects: created when their thread is start and destroyed when their thread is end.
 
+[PROGRAM TERMINATION]
+* return form main()
+* calling exit()
+* calling abort()
+* throwing uncaught exception
+* violating noexcept
+* calling quick_exit()
+
 [NOTES]
 * prefer {} initialization over alternatives unless you have strong reason not to.
 * prefer = when using auto rather than {} for initialization.
@@ -341,6 +355,11 @@
 * virtual member functions are resolved dynamically. (at run-time)
 * gsl::index should be used for indexing.
 * when derived-class object is deleted via base-class pointer destructor should be virtual.
+* if extern variable has been initialized, extern would simply be ignored because declaration with initializer is always definition.
+* object must be defined exactly once in program.
+* entity must be declared before it is used.
+* unnamed namespace can be used to make names local to compilation unit. like internal linkage.
+* use include guard to prevent compiler evaluate same code again.
 
 
 * Nifty Counter Idiom: 
