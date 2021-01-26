@@ -91,6 +91,7 @@
 * External Linkage: name that can be used in translation units different from one in which it was defined. extern.
 * Internal Linkage: name that can be referred to only in translation unit in which it is defined. not accessible from other source files. static.
 * No Linkage: names that linker does not see, such as names of local variables.
+* Virtual Table: data structure  for classes that have virtual functions to handle dynamic binding.
 
 
 [C++ ENTITIES]
@@ -360,7 +361,9 @@
 * entity must be declared before it is used.
 * unnamed namespace can be used to make names local to compilation unit. like internal linkage.
 * use include guard to prevent compiler evaluate same code again.
+* Overload resolution conceptually happens in one scope at time.
 
 
 * Nifty Counter Idiom: 
 * Return Value Optimization: 
+* Dynamic Binding During Initialization Idiom: calling virtuals during initialization.
