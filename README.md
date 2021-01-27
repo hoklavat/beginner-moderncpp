@@ -46,3 +46,5 @@
 - 40-Versioning
 - 41-OverloadResolution
 - 42-CrossDelegation
+- 43-LogicalConstness
+- 44-StaticMember
