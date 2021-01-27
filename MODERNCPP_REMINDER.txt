@@ -94,6 +94,7 @@
 * Virtual Table: data structure  for classes that have virtual functions to handle dynamic binding.
 
 
+
 [C++ ENTITIES]
 * Type
 * Value
@@ -361,9 +362,10 @@
 * entity must be declared before it is used.
 * unnamed namespace can be used to make names local to compilation unit. like internal linkage.
 * use include guard to prevent compiler evaluate same code again.
-* Overload resolution conceptually happens in one scope at time.
+* overload resolution conceptually happens in one scope at time.
+* dreaded diamond refers to class structure in which particular class appears more than once in inheritance hierarchy. causes ambiguity.
+* Virtual Inheritance: to avoid duplicated base class subobject that occurs with dreaded diamond, virtual keyword is used in inheritance part of classes that derive directly from top of diamond.
 
-
-* Nifty Counter Idiom: 
+* Nifty Counter Idiom: 
 * Return Value Optimization: 
 * Dynamic Binding During Initialization Idiom: calling virtuals during initialization.

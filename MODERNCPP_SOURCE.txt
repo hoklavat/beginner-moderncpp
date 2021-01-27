@@ -43,3 +43,5 @@
 38-ProtectedAccess
 39-Inheritance
 40-Versioning
+41-OverloadResolution
+42-CrossDelegation
