@@ -1,7 +1,4 @@
-
-
 # **MODERN C++ SOURCE CODES**
-------------
 
 ## [SOFTWARE]
 - **COMPILER:** MinGW GCC, MSVC
