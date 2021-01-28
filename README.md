@@ -1,7 +1,7 @@
 # **MODERN C++ SOURCE CODES**
 
 ## [SOFTWARE]
-- **COMPILER:** MinGW GCC, MSVC
+- **COMPILER:** MinGW GNU C++, MSVC
 - **IDE:** CodeLite, Visual Studio 2019
 
 ## [SOURCE CODES]
