@@ -94,6 +94,8 @@
 * Virtual Table: data structure  for classes that have virtual functions to handle dynamic binding.
 * Static Member: variable that is part of class, yet is not part of object of that class. there is only one copy for all objects.
 * Concrete Class: representation is part of definition.
+* Parameterized Type: type that is parameterized over another type or some value. class template or genericity.
+* SFINAE: Substitution Failure Is Not An Error. if types do not match exactly in overloading resolution, conversions are not considered and template is simply dropped from set of viable functions.
 
 
 [C++ ENTITIES]

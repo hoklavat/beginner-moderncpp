@@ -48,3 +48,5 @@
 - 42-CrossDelegation
 - 43-LogicalConstness
 - 44-StaticMember
+- 45-TemplateSpecialization
+- 46-SFINAE
