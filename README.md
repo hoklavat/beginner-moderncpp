@@ -50,3 +50,4 @@
 - 44-StaticMember
 - 45-TemplateSpecialization
 - 46-SFINAE
+- 47-TemplateDerivedClass
