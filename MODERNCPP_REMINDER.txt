@@ -99,6 +99,7 @@
 * Precondition: condition that must always be true just prior to execution of code.
 * Postcondition: condition that must always be true just after execution of code.
 * Assertion: condition connected to point in program, that always should evaluate to true at that point in code execution.
+* PIMPL: pointer to implementation.
 
 
 [C++ ENTITIES]
@@ -381,3 +382,42 @@
 * Nifty Counter Idiom: 
 * Return Value Optimization: 
 * Dynamic Binding During Initialization Idiom: calling virtuals during initialization.
+* Don’t pass arrays as pointers, pass object representing range.
+* Prefer struct as parameter type rather than long argument list.
+* Prefer abstract classes as interfaces to class hierarchies.
+
+
+[ISO CPP GUIDELINESS]
+P.1: Express ideas directly in code.
+P.2: Write in ISO Standard C++.
+P.3: Express intent.
+P.4: Ideally, a program should be statically type safe.
+P.5: Prefer compile-time checking to run-time checking.
+P.6: What cannot be checked at compile time should be checkable at run time.
+P.7: Catch run-time errors early.
+P.8: Don’t leak any resources.
+P.9: Don’t waste time or space.
+P.10: Prefer immutable data to mutable data.
+P.11: Encapsulate messy constructs, rather than spreading through the code.
+P.12: Use supporting tools as appropriate.
+P.13: Use support libraries as appropriate.
+I.1: Make interfaces explicit.
+I.2: Avoid non-const global variables.
+I.3: Avoid singletons.
+I.4: Make interfaces precisely and strongly typed.
+I.5: State preconditions (if any).
+I.6: Prefer Expects() for expressing preconditions.
+I.7: State postconditions.
+I.8: Prefer Ensures() for expressing postconditions.
+I.9: If an interface is a template, document its parameters using concepts.
+I.10: Use exceptions to signal a failure to perform a required task.
+I.11: Never transfer ownership by a raw pointer (T*) or reference (T&).
+I.12: Declare a pointer that must not be null as not_null.
+I.13: Do not pass an array as a single pointer.
+I.22: Avoid complex initialization of global objects.
+I.23: Keep the number of function arguments low.
+I.24: Avoid adjacent parameters of the same type when changing the argument order would change meaning.
+I.25: Prefer abstract classes as interfaces to class hierarchies.
+I.26: If you want a cross-compiler ABI, use a C-style subset.
+I.27: For stable library ABI, consider the Pimpl idiom.
+I.30: Encapsulate rule violations.
