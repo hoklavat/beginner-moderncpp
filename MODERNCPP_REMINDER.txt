@@ -96,6 +96,9 @@
 * Concrete Class: representation is part of definition.
 * Parameterized Type: type that is parameterized over another type or some value. class template or genericity.
 * SFINAE: Substitution Failure Is Not An Error. if types do not match exactly in overloading resolution, conversions are not considered and template is simply dropped from set of viable functions.
+* Precondition: condition that must always be true just prior to execution of code.
+* Postcondition: condition that must always be true just after execution of code.
+* Assertion: condition connected to point in program, that always should evaluate to true at that point in code execution.
 
 
 [C++ ENTITIES]
