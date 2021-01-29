@@ -20,6 +20,24 @@ void f(T (&c)[N]){
 	std::cout << std::endl;
 }
 
+//List Traversal.
+void g(std::initializer_list<int> l){
+	//Method 1
+	for(int i = 0; i < l.size(); ++i)
+		std::cout << l.begin()[i] << " ";
+	std::cout << std::endl;
+	
+	//Method 2
+	for(auto p = l.begin(); p != l.end(); ++p)
+		std::cout << *p << " ";
+	std::cout << std::endl;
+	
+	//Method 3
+	for(auto a: l)
+		std::cout << a << " ";
+	std::cout << std::endl;
+}
+
 int main(){
 	C c{1, 2, 3};
 	std::cout << c.data[0] << std::endl;
@@ -37,4 +55,6 @@ int main(){
 	};
 	
 	f(a);
+	
+	g({1, 2, 3, 4, 5});
 }

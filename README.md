@@ -51,3 +51,5 @@
 - 45-TemplateSpecialization
 - 46-SFINAE
 - 47-TemplateDerivedClass
+- 48-RuleOfFive
+- 49-ExplicitDestructor

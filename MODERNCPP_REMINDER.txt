@@ -100,6 +100,7 @@
 * Postcondition: condition that must always be true just after execution of code.
 * Assertion: condition connected to point in program, that always should evaluate to true at that point in code execution.
 * PIMPL: pointer to implementation.
+* Rule of Five: if class has destructor that performs nontrivial task, such as free-store deallocation or lock release, class is likely to need full complement of functions: user-defined/copy/move constructors, copy/move assignments.
 
 
 [C++ ENTITIES]
@@ -379,12 +380,19 @@
 * declare constructor that can be called with single argument explicit.
 * const does not apply (transitively) to objects accessed through pointers or references.
 * nested class can refer to types and static members of its enclosing class, but has no notion of current object of enclosing class.
-* Nifty Counter Idiom: 
-* Return Value Optimization: 
 * Dynamic Binding During Initialization Idiom: calling virtuals during initialization.
 * Don’t pass arrays as pointers, pass object representing range.
 * Prefer struct as parameter type rather than long argument list.
 * Prefer abstract classes as interfaces to class hierarchies.
+* Separate interface of class from its implementation.
+* Destructor will be implicitly invoked whenever X goes out of scope or is deleted.
+* Destruction can be prevented by declaring destructor =delete or private.
+* virtual destructor in base class makes it possible to delete appropriate derived class destructor.
+* default constructor disappears when you define constructor requiring arguments. copy constructor does not disappear.
+* references and consts must be initialized.
+* Nifty Counter Idiom: 
+* Return Value Optimization: 
+
 
 
 [ISO CPP GUIDELINESS]
