@@ -25,7 +25,7 @@
 * Function: entities that associate sequence of statements with name and required parameters.
 * Object: is region of storage that has size, alignment requirement, storage duration, lifetime, type, value, name.
 * Class: user-defined type that can have data member, member function, nested types, enumerators, member templates.
-* Template: entity that defines one of the following: family of classes, family of functions, alias to family of types, family of variables, concept.
+* Template: entity that defines one of following: family of classes, family of functions, alias to family of types, family of variables, concept.
 * Variadic Template: allows to handle arbitrary number of arbitrary types.
 * Initializer List: allows to handle arbitrary number of arguments of single type.
 * Exception: provides way of transferring control and information from some point in execution of program to handler.
