@@ -7,7 +7,8 @@
 * Preprocessor: preprocessing directives control the behavior of preprocessor that is executed at translation phase 4.
 * Header: included source file into current source file.
 * Identifier: used to name entities. unqualified, qualified.
-* Name: denotes entity is introduced into program by declaration. identifier, overloaded operator, user defined conversion function, user defined literal, template name.
+* Name: denotes entity is introduced into program by declaration. identifier, overloaded operator, user defined conversion function, user defined literal, 
+template name.
 * Type: restricts operations that are permitted for specific entities and provides semantic meaning otherwise generic sequences of bits.
 * Variable: declared objects and declared references that are not non-static data members.
 * Pointer: points to object represents address of first byte in memory occupied by object.
@@ -67,16 +68,21 @@
 * Constant Expression: expression that compiler can evaluate.
 * Handle: technique that will uniquely identify and get to another object.
 * Encapsulation: preventing unauthorized access to some piece of information or functionality.
-* Lexical Analysis: process of converting sequence of characters into sequence of tokens. takes modified source code from language preprocessors that are written in form of sentences. breaks these syntaxes into series of tokens, by removing any whitespace or comments in source code.
-* Syntax Analysis: Parsing. set of rules, principles, and processes that govern structure of sentences in language. takes input from lexical analyzer in form of token streams and analyzes source code (token stream) against production rules to detect errors in code.
-* Semantic Analysis: study of meaning. relationship between form and meaning. interpret symbols, their types, and their relations with each other. judges whether syntax structure constructed in source program derives any meaning or not.
+* Lexical Analysis: process of converting sequence of characters into sequence of tokens. takes modified source code from language preprocessors that are written 
+in form of sentences. breaks these syntaxes into series of tokens, by removing any whitespace or comments in source code.
+* Syntax Analysis: Parsing. set of rules, principles, and processes that govern structure of sentences in language. takes input from lexical analyzer in form of 
+token streams and analyzes source code (token stream) against production rules to detect errors in code.
+* Semantic Analysis: study of meaning. relationship between form and meaning. interpret symbols, their types, and their relations with each other. judges whether 
+syntax structure constructed in source program derives any meaning or not.
 * Constructor: builds objects from predefined types. explicit purpose is initializing objects.
 * Default Constructor: constructor that can be called with no arguments, or that can take arguments, provided they are given default values.
 * Named Constructor: provide public static methods that return object.
 * RAII: Resource Acquisition Is Initialization. when object is constructed on free store, its pointer placed into manager object with destructor that will destroy it. this method avoids resource leaks and making error handling using exceptions simple and safe.
-* Lambda Expression: simplified notation for defining and using anonymous function object. useful when passing operation as argument to algorithm. example: callback in gui applications.
+* Lambda Expression: simplified notation for defining and using anonymous function object. useful when passing operation as argument to algorithm. example: callback 
+in gui applications.
 * Casting: explicit type conversion.
-* Inline Function: compiler attempts to generate code for a call of function inline rather than laying down code for function once and then calling through usual function call mechanism.
+* Inline Function: compiler attempts to generate code for a call of function inline rather than laying down code for function once and then calling through usual 
+function call mechanism.
 * One Definition Rule: ODR. there must be exactly one definition. definitions in different translation units must be identical.
 * Overloading: using same name for operations on different types is called overloading.
 * Friend: function or class that is allowed to access to another class or function.
@@ -95,12 +101,15 @@
 * Static Member: variable that is part of class, yet is not part of object of that class. there is only one copy for all objects.
 * Concrete Class: representation is part of definition.
 * Parameterized Type: type that is parameterized over another type or some value. class template or genericity.
-* SFINAE: Substitution Failure Is Not An Error. if types do not match exactly in overloading resolution, conversions are not considered and template is simply dropped from set of viable functions.
+* SFINAE: Substitution Failure Is Not An Error. if types do not match exactly in overloading resolution, conversions are not considered and template is simply dropped 
+from set of viable functions.
 * Precondition: condition that must always be true just prior to execution of code.
 * Postcondition: condition that must always be true just after execution of code.
 * Assertion: condition connected to point in program, that always should evaluate to true at that point in code execution.
 * PIMPL: pointer to implementation.
-* Rule of Five: if class has destructor that performs nontrivial task, such as free-store deallocation or lock release, class is likely to need full complement of functions: user-defined/copy/move constructors, copy/move assignments.
+* Rule of Five: if class has destructor that performs nontrivial task, such as free-store deallocation or lock release, class is likely to need full complement of 
+functions: user-defined/copy/move constructors, copy/move assignments.
+* STL: standard templates library. library that consists mainly of container classes, along with some iterators and algorithms to work with contents of these containers.
 
 
 [C++ ENTITIES]
