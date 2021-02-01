@@ -104,7 +104,7 @@
 * STL: standard templates library. library that consists mainly of container classes, along with some iterators and algorithms to work with contents of these containers.
 * Copy Constructor: makes copy of object without modifying it.
 * Shallow Copy: copy and original objects can change their state. shared state.
-* Invariant: 
+* Invariant: invariant used for constraining objects of class.
 
 [C++ ENTITIES]
 * Type
