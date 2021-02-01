@@ -110,6 +110,9 @@ from set of viable functions.
 * Rule of Five: if class has destructor that performs nontrivial task, such as free-store deallocation or lock release, class is likely to need full complement of 
 functions: user-defined/copy/move constructors, copy/move assignments.
 * STL: standard templates library. library that consists mainly of container classes, along with some iterators and algorithms to work with contents of these containers.
+* Copy Constructor: makes copy of object without modifying it.
+* Shallow Copy: copy and original objects can change their state. shared state.
+* Invariant: 
 
 
 [C++ ENTITIES]
@@ -399,6 +402,11 @@ functions: user-defined/copy/move constructors, copy/move assignments.
 * virtual destructor in base class makes it possible to delete appropriate derived class destructor.
 * default constructor disappears when you define constructor requiring arguments. copy constructor does not disappear.
 * references and consts must be initialized.
+* you cannot both delegate and explicitly initialize member.
+* using =default is always better than writing your own implementation of default semantics.
+* copy operations should provide equivalence and independence.
+* if class is used as base class, protect against slicing.
+* make sure that copy assignments are safe for self-assignment.
 * Nifty Counter Idiom: 
 * Return Value Optimization: 
 
