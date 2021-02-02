@@ -1,110 +1,111 @@
 ﻿*** MODERN CPP ***
 
 [BASIC TERMS]
-* Comment: used as notes by humans that read source code. ignored by compiler.
-* Keyword: reserved keywords those are not available for redefinition or overloading.
-* Escape Sequence: used to represent certain special characters within string literals and character literals.
-* Preprocessor: preprocessing directives control the behavior of preprocessor that is executed at translation phase 4.
-* Header: included source file into current source file.
-* Identifier: used to name entities. unqualified, qualified.
-* Name: denotes entity is introduced into program by declaration. identifier, overloaded operator, user defined conversion function, user defined literal, template name.
-* Type: restricts operations that are permitted for specific entities and provides semantic meaning otherwise generic sequences of bits.
-* Variable: declared objects and declared references that are not non-static data members.
-* Pointer: points to object represents address of first byte in memory occupied by object.
-* Reference: alias for object, is usually implemented to hold machine address of object. alternative name for object. lvalue/const/rvalue references.
-* Scope: each name is valid in discontiguous portion of source code called its scope.
-* Lifetime: for any object or reference there is point of execution of program when its lifetime begins and there is moment when it ends.
-* Expression: sequence of operators and their operands that specifies computation.
-* Full Expression: expression that is not subexpression of some other expression.
-* Statement: fragments of program that are executed in sequence.
-* Operator: defines type of operation between operands.
-* Literal: tokens that represent constant values embedded in source code.
-* Declaration: introduce names into program.
-* Definition: declarations that fully define entity introduced by declaration.
-* Initialization: provides initial value of variable at time of construction.
-* Function: entities that associate sequence of statements with name and required parameters.
-* Object: is region of storage that has size, alignment requirement, storage duration, lifetime, type, value, name.
-* Class: user-defined type that can have data member, member function, nested types, enumerators, member templates.
-* Template: entity that defines one of following: family of classes, family of functions, alias to family of types, family of variables, concept.
-* Variadic Template: allows to handle arbitrary number of arbitrary types.
-* Initializer List: allows to handle arbitrary number of arguments of single type.
-* Exception: provides way of transferring control and information from some point in execution of program to handler.
-* Module: help divide large amounts of code into logical parts.
-* Name Lookup: procedure by which name, when encountered in a program, is associated with declaration that introduced it.
-* As If Rule: allows any and all code transformations that do not change observable behavior of program.
-* Undefined Behaviour: renders entire program meaningless if certain rules of language are violated.
-* Memory Model: defines semantics of computer memory storage for purpose of abstract machine.
-* Named Requirements: used in normative text of C++ standard to define expectations of standard library.
-* Feature Testing: defines set of preprocessor macros those are intended as simple and portable way to detect presence of said features.
-* Type Traits: defines compile-time template-based interface to query or modify properties of types.
-* Concept: perform compile-time validation of template arguments and perform function dispatch based on properties of types.
-* Container: generic collection of class templates and algorithms that allow programmers to easily implement common data structures.
-* Iterator: specifies that objects of type can be incremented and dereferenced.
-* Storage Duration: determines how storage for object is allocated and deallocated.
-* Linkage: if name has linkage, it refers to same entity as same name introduced by declaration in another scope.
-* Alignment: bytes used to hold object must have proper alignment for hardware to access it efficiently.
-* Block: block is section of code delimited by {} pair.
-* Implementation Defined: each implementation must provide specific, well-defined behavior for construct and that behavior must be documented.
-* Prefix: affix which is placed before stem of word.
-* Suffix: affix which is placed after stem of word.
-* Has Identity: program has name of pointer or reference to object. (i)
-* Movable: program allowed to move object value to another location and leave this object in valid but unspecified state. (m)
-* LValue: expression that refers to object. something that can be on left-hand side of assignment. lvalue(i&!m) glvalue:generalized(i), xlvalue:extraordinary(i&m).
-* RValue: value that is not lvalue. rvalue(m), prvalue:pure(!i&m)
-* Dereferencing: referring to object pointed to by pointer. indirection.
-* Null Pointer: pointer that does not point to an object. nullptr.
-* Structure: aggregate of elements of arbitrary types.
-* Const Correctness: prevent constant objects from getting mutated using const keyword.
-* Plain Old Data: POD. contiguous sequence of bytes in memory. raw data. allows block operations.
-* Trivial Type: type that has trivial default constructor, copy and move operations. trivial means no need to do work.
-* Trivially Copyable Type: type that has nontrivial copy operation, move operation, or destructor. can be implemented as bitwise copy.
-* Standard Layout Type:
-* Union: struct in which all members are allocated at same address so that it occupies only as much space as its largest member.
-* Enumeration: type that can hold set of integer values specified by user.
-* Promotion: implicit conversion that preserve values. example: long to int.
-* Narrowing Conversion: implicit conversion that can result information loss. example: int to long.
-* Literal Type: class with constexpr constructor.
-* Constant Expression: expression that compiler can evaluate.
-* Handle: technique that will uniquely identify and get to another object.
-* Encapsulation: preventing unauthorized access to some piece of information or functionality.
-* Lexical Analysis: process of converting sequence of characters into sequence of tokens. takes modified source code from language preprocessors that are written in form of sentences. breaks these syntaxes into series of tokens, by removing any whitespace or comments in source code.
-* Syntax Analysis: Parsing. set of rules, principles, and processes that govern structure of sentences in language. takes input from lexical analyzer in form of token streams and analyzes source code (token stream) against production rules to detect errors in code.
-* Semantic Analysis: study of meaning. relationship between form and meaning. interpret symbols, their types, and their relations with each other. judges whether syntax structure constructed in source program derives any meaning or not.
-* Constructor: builds objects from predefined types. explicit purpose is initializing objects.
-* Default Constructor: constructor that can be called with no arguments, or that can take arguments, provided they are given default values.
-* Named Constructor: provide public static methods that return object.
-* RAII: Resource Acquisition Is Initialization. when object is constructed on free store, its pointer placed into manager object with destructor that will destroy it. this method avoids resource leaks and making error handling using exceptions simple and safe.
-* Lambda Expression: simplified notation for defining and using anonymous function object. useful when passing operation as argument to algorithm. example: callback in gui applications.
-* Casting: explicit type conversion.
-* Inline Function: compiler attempts to generate code for a call of function inline rather than laying down code for function once and then calling through usual function call mechanism.
-* One Definition Rule: ODR. there must be exactly one definition. definitions in different translation units must be identical.
-* Overloading: using same name for operations on different types is called overloading.
-* Friend: function or class that is allowed to access to another class or function.
-* Static Typing: legality of member function invocation is checked at earliest possible moment by compiler at compile time. 
-* Dynamic Binding: member function is selected dynamically (at run-time) based on type of object, not type of pointer/reference to that object.
-* Pure Virtual Function: function that must be overridden in derived class and need not be defined.
 * Abstract Class: no objects of class can be directly created. 
-* Interface: class with no data and where all member functions are pure virtual functions.
-* Argument Dependent Lookup: if function isn’t found in context of its use, it is looked in namespaces of its arguments.
-* Translation Unit: unit is what compiler proper works on and what C++ language rules describe.
-* Linker: loader. program that binds together separately compiled parts.
-* External Linkage: name that can be used in translation units different from one in which it was defined. extern.
-* Internal Linkage: name that can be referred to only in translation unit in which it is defined. not accessible from other source files. static.
-* No Linkage: names that linker does not see, such as names of local variables.
-* Virtual Table: data structure  for classes that have virtual functions to handle dynamic binding.
-* Static Member: variable that is part of class, yet is not part of object of that class. there is only one copy for all objects.
-* Concrete Class: representation is part of definition.
-* Parameterized Type: type that is parameterized over another type or some value. class template or genericity.
-* SFINAE: Substitution Failure Is Not An Error. if types do not match exactly in overloading resolution, conversions are not considered and template is simply dropped from set of viable functions.
-* Precondition: condition that must always be true just prior to execution of code.
-* Postcondition: condition that must always be true just after execution of code.
-* Assertion: condition connected to point in program, that always should evaluate to true at that point in code execution.
-* PIMPL: pointer to implementation.
-* Rule of Five: if class has destructor that performs nontrivial task, such as free-store deallocation or lock release, class is likely to need full complement of functions: user-defined/copy/move constructors, copy/move assignments.
-* STL: standard templates library. library that consists mainly of container classes, along with some iterators and algorithms to work with contents of these containers.
-* Copy Constructor: makes copy of object without modifying it.
-* Shallow Copy: copy and original objects can change their state. shared state.
-* Invariant: invariant used for constraining objects of class.
+* Alignment: bytes used to hold object must have proper alignment for hardware to access it efficiently. 
+* Argument Dependent Lookup: if function isn’t found in context of its use, it is looked in namespaces of its arguments. 
+* As If Rule: allows any and all code transformations that do not change observable behavior of program. 
+* Assertion: condition connected to point in program, that always should evaluate to true at that point in code execution. 
+* Block: block is section of code delimited by {} pair. 
+* Casting: explicit type conversion. 
+* Class: user-defined type that can have data member, member function, nested types, enumerators, member templates. 
+* Comment: used as notes by humans that read source code. ignored by compiler. 
+* Concept: perform compile-time validation of template arguments and perform function dispatch based on properties of types. 
+* Concrete Class: representation is part of definition. 
+* Const Correctness: prevent constant objects from getting mutated using const keyword. 
+* Constant Expression: expression that compiler can evaluate. 
+* Constructor: builds objects from predefined types. explicit purpose is initializing objects. 
+* Container: generic collection of class templates and algorithms that allow programmers to easily implement common data structures. 
+* Copy Constructor: makes copy of object without modifying it. 
+* Declaration: introduce names into program. 
+* Default Constructor: constructor that can be called with no arguments, or that can take arguments, provided they are given default values. 
+* Definition: declarations that fully define entity introduced by declaration. 
+* Dereferencing: referring to object pointed to by pointer. indirection. 
+* Dynamic Binding: member function is selected dynamically (at run-time) based on type of object, not type of pointer/reference to that object. 
+* Encapsulation: preventing unauthorized access to some piece of information or functionality. 
+* Enumeration: type that can hold set of integer values specified by user. 
+* Escape Sequence: used to represent certain special characters within string literals and character literals. 
+* Exception: provides way of transferring control and information from some point in execution of program to handler. 
+* Expression: sequence of operators and their operands that specifies computation. 
+* External Linkage: name that can be used in translation units different from one in which it was defined. extern. 
+* Feature Testing: defines set of preprocessor macros those are intended as simple and portable way to detect presence of said features. 
+* Friend: function or class that is allowed to access to another class or function. 
+* Full Expression: expression that is not subexpression of some other expression. 
+* Function: entities that associate sequence of statements with name and required parameters. 
+* Handle: technique that will uniquely identify and get to another object. 
+* Has Identity: program has name of pointer or reference to object. (i) 
+* Header: included source file into current source file. 
+* Identifier: used to name entities. unqualified, qualified. 
+* Implementation Defined: each implementation must provide specific, well-defined behavior for construct and that behavior must be documented. 
+* Initialization: provides initial value of variable at time of construction. 
+* Initializer List: allows to handle arbitrary number of arguments of single type. 
+* Inline Function: compiler attempts to generate code for a call of function inline rather than laying down code for function once and then calling through usual function call mechanism. 
+* Interface: class with no data and where all member functions are pure virtual functions. 
+* Internal Linkage: name that can be referred to only in translation unit in which it is defined. not accessible from other source files. static. 
+* Invariant: invariant used for constraining objects of class. 
+* Iterator: specifies that objects of type can be incremented and dereferenced. 
+* Keyword: reserved keywords those are not available for redefinition or overloading. 
+* Lambda Expression: simplified notation for defining and using anonymous function object. useful when passing operation as argument to algorithm. example 
+* Lexical Analysis: process of converting sequence of characters into sequence of tokens. takes modified source code from language preprocessors that are written in form of sentences. breaks these syntaxes into series of tokens, by removing any whitespace or comments in source code. 
+* Lifetime: for any object or reference there is point of execution of program when its lifetime begins and there is moment when it ends. 
+* Linkage: if name has linkage, it refers to same entity as same name introduced by declaration in another scope. 
+* Linker: loader. program that binds together separately compiled parts. 
+* Literal: tokens that represent constant values embedded in source code. 
+* Literal Type: class with constexpr constructor. 
+* LValue: expression that refers to object. something that can be on left-hand side of assignment. lvalue(i&!m) glvalue 
+* Memory Model: defines semantics of computer memory storage for purpose of abstract machine. 
+* Module: help divide large amounts of code into logical parts. 
+* Movable: program allowed to move object value to another location and leave this object in valid but unspecified state. (m) 
+* Name: denotes entity is introduced into program by declaration. identifier, overloaded operator, user defined conversion function, user defined literal, template name. 
+* Name Lookup: procedure by which name, when encountered in a program, is associated with declaration that introduced it. 
+* Named Constructor: provide public static methods that return object. 
+* Named Requirements: used in normative text of C++ standard to define expectations of standard library. 
+* Narrowing Conversion: implicit conversion that can result information loss. example 
+* No Linkage: names that linker does not see, such as names of local variables. 
+* Null Pointer: pointer that does not point to an object. nullptr. 
+* Object: is region of storage that has size, alignment requirement, storage duration, lifetime, type, value, name. 
+* One Definition Rule: ODR. there must be exactly one definition. definitions in different translation units must be identical. 
+* Operator: defines type of operation between operands. 
+* Overloading: using same name for operations on different types is called overloading. 
+* Parameterized Type: type that is parameterized over another type or some value. class template or genericity. 
+* PIMPL: pointer to implementation. 
+* Plain Old Data: POD. contiguous sequence of bytes in memory. raw data. allows block operations. 
+* Pointer: points to object represents address of first byte in memory occupied by object. 
+* Postcondition: condition that must always be true just after execution of code. 
+* Precondition: condition that must always be true just prior to execution of code. 
+* Prefix: affix which is placed before stem of word. 
+* Preprocessor: preprocessing directives control the behavior of preprocessor that is executed at translation phase 4. 
+* Promotion: implicit conversion that preserve values. example 
+* Pure Virtual Function: function that must be overridden in derived class and need not be defined. 
+* RAII: Resource Acquisition Is Initialization. when object is constructed on free store, its pointer placed into manager object with destructor that will destroy it. this method avoids resource leaks and making error handling using exceptions simple and safe. 
+* Reference: alias for object, is usually implemented to hold machine address of object. alternative name for object. lvalue/const/rvalue references. 
+* Rule of Five: if class has destructor that performs nontrivial task, such as free-store deallocation or lock release, class is likely to need full complement of functions 
+* RValue: value that is not lvalue. rvalue(m), prvalue 
+* Scope: each name is valid in discontiguous portion of source code called its scope. 
+* Semantic Analysis: study of meaning. relationship between form and meaning. interpret symbols, their types, and their relations with each other. judges whether syntax structure constructed in source program derives any meaning or not. 
+* SFINAE: Substitution Failure Is Not An Error. if types do not match exactly in overloading resolution, conversions are not considered and template is simply dropped from set of viable functions. 
+* Shallow Copy: copy and original objects can change their state. shared state. 
+* Stack Unwinding: process of removing function entries from function call stack at run time. 
+* Standard Layout Type:  
+* Statement: fragments of program that are executed in sequence. 
+* Static Member: variable that is part of class, yet is not part of object of that class. there is only one copy for all objects. 
+* Static Typing: legality of member function invocation is checked at earliest possible moment by compiler at compile time. 
+* STL: standard templates library. library that consists mainly of container classes, along with some iterators and algorithms to work with contents of these containers. 
+* Storage Duration: determines how storage for object is allocated and deallocated. 
+* Structure: aggregate of elements of arbitrary types. 
+* Suffix: affix which is placed after stem of word. 
+* Syntax Analysis: Parsing. set of rules, principles, and processes that govern structure of sentences in language. takes input from lexical analyzer in form of token streams and analyzes source code (token stream) against production rules to detect errors in code. 
+* Template: entity that defines one of following 
+* Translation Unit: unit is what compiler proper works on and what C++ language rules describe. 
+* Trivial Type: type that has trivial default constructor, copy and move operations. trivial means no need to do work. 
+* Trivially Copyable Type: type that has nontrivial copy operation, move operation, or destructor. can be implemented as bitwise copy. 
+* Type: restricts operations that are permitted for specific entities and provides semantic meaning otherwise generic sequences of bits. 
+* Type Traits: defines compile-time template-based interface to query or modify properties of types. 
+* Undefined Behaviour: renders entire program meaningless if certain rules of language are violated. 
+* Union: struct in which all members are allocated at same address so that it occupies only as much space as its largest member. 
+* Variable: declared objects and declared references that are not non-static data members. 
+* Variadic Template: allows to handle arbitrary number of arbitrary types. 
+* Virtual Table: data structure for classes that have virtual functions to handle dynamic binding. 
 
 [C++ ENTITIES]
 * Type
@@ -398,6 +399,9 @@
 * copy operations should provide equivalence and independence.
 * if class is used as base class, protect against slicing.
 * make sure that copy assignments are safe for self-assignment.
+* you must never throw an exception from destructor.
+* you can catch exception by value, by reference or by pointer.
+
 * Nifty Counter Idiom: 
 * Return Value Optimization: 
 
@@ -435,3 +439,145 @@ I.25: Prefer abstract classes as interfaces to class hierarchies.
 I.26: If you want a cross-compiler ABI, use a C-style subset.
 I.27: For stable library ABI, consider the Pimpl idiom.
 I.30: Encapsulate rule violations.
+F.1: “Package” meaningful operations as carefully named functions.
+F.2: A function should perform a single logical operation.
+F.3: Keep functions short and simple.
+F.4: If a function may have to be evaluated at compile time, declare it constexpr.
+F.5: If a function is very small and time-critical, declare it inline.
+F.6: If your function may not throw, declare it noexcept.
+F.7: For general use, take T* or T& arguments rather than smart pointers.
+F.8: Prefer pure functions.
+F.9: Unused parameters should be unnamed.
+F.15: Prefer simple and conventional ways of passing information.
+F.16: For “in” parameters, pass cheaply-copied types by value and others by reference to const.
+F.17: For “in-out” parameters, pass by reference to non-const.
+F.18: For “will-move-from” parameters, pass by X&& and std::move the parameter.
+F.19: For “forward” parameters, pass by TP&& and only std::forward the parameter.
+F.20: For “out” output values, prefer return values to output parameters.
+F.21: To return multiple “out” values, prefer returning a struct or tuple
+F.60: Prefer T* over T& when “no argument” is a valid option.
+F.22: Use T* or owner<T*> to designate a single object.
+F.23: Use a not_null<T> to indicate that “null” is not a valid value.
+F.24: Use a span<T> or a span_p<T> to designate a half-open sequence.
+F.25: Use a zstring or a not_null<zstring> to designate a C-style string.
+F.26: Use a unique_ptr<T> to transfer ownership where a pointer is needed.
+F.27: Use a shared_ptr<T> to share ownership.
+F.42: Return a T* to indicate a position (only).
+F.43: Never (directly or indirectly) return a pointer or a reference to a local object.
+F.44: Return a T& when copy is undesirable and “returning no object” isn’t needed.
+F.45: Don’t return a T&&.
+F.46: int is the return type for main().
+F.47: Return T& from assignment operators.
+F.48: Don’t return std::move(local).
+F.50: Use a lambda when a function won’t do (to capture local variables, or to write a local function).
+F.51: Where there is a choice, prefer default arguments over overloading.
+F.52: Prefer capturing by reference in lambdas that will be used locally, including passed to algorithms.
+F.53: Avoid capturing by reference in lambdas that will be used non-locally, including returned, stored on the heap, or passed to another thread.
+F.54: If you capture this, capture all variables explicitly (no default capture).
+F.55: Don’t use va_arg arguments.
+C.1: Organize related data into structures (structs or classes).
+C.2: Use class if the class has an invariant; use struct if the data members can vary independently.
+C.3: Represent the distinction between an interface and an implementation using a class.
+C.4: Make a function a member only if it needs direct access to the representation of a class.
+C.5: Place helper functions in the same namespace as the class they support.
+C.7: Don’t define a class or enum and declare a variable of its type in the same statement.
+C.8: Use class rather than struct if any member is non-public.
+C.9: Minimize exposure of members.
+Enum.1: Prefer enumerations over macros.
+Enum.2: Use enumerations to represent sets of related named constants.
+Enum.3: Prefer enum classes over “plain” enums.
+Enum.4: Define operations on enumerations for safe and simple use.
+Enum.5: Don’t use ALL_CAPS for enumerators.
+Enum.6: Avoid unnamed enumerations.
+Enum.7: Specify the underlying type of an enumeration only when necessary.
+Enum.8: Specify enumerator values only when necessary.
+R.1: Manage resources automatically using resource handles and RAII (Resource Acquisition Is Initialization).
+R.2: In interfaces, use raw pointers to denote individual objects (only).
+R.3: A raw pointer (a T*) is non-owning.
+R.4: A raw reference (a T&) is non-owning.
+R.5: Prefer scoped objects, don’t heap-allocate unnecessarily.
+R.6: Avoid non-const global variables.
+R.10: Avoid malloc() and free().
+R.11: Avoid calling new and delete explicitly.
+R.12: Immediately give the result of an explicit resource allocation to a manager object.
+R.13: Perform at most one explicit resource allocation in a single expression statement.
+R.14: Avoid [] parameters, prefer span.
+R.15: Always overload matched allocation/deallocation pairs.
+R.20: Use unique_ptr or shared_ptr to represent ownership.
+R.21: Prefer unique_ptr over shared_ptr unless you need to share ownership.
+R.22: Use make_shared() to make shared_ptrs.
+R.23: Use make_unique() to make unique_ptrs.
+R.24: Use std::weak_ptr to break cycles of shared_ptrs.
+R.30: Take smart pointers as parameters only to explicitly express lifetime semantics.
+R.31: If you have non-std smart pointers, follow the basic pattern from std.
+R.32: Take a unique_ptr<widget> parameter to express that a function assumes ownership of a widget.
+R.33: Take a unique_ptr<widget>& parameter to express that a function reseats the widget.
+R.34: Take a shared_ptr<widget> parameter to express that a function is part owner.
+R.35: Take a shared_ptr<widget>& parameter to express that a function might reseat the shared pointer.
+R.36: Take a const shared_ptr<widget>& parameter to express that it might retain a reference count to the object ???.
+R.37: Do not pass a pointer or reference obtained from an aliased smart pointer.
+ES.1: Prefer the standard library to other libraries and to “handcrafted code”.
+ES.2: Prefer suitable abstractions to direct use of language features.
+ES.5: Keep scopes small.
+ES.6: Declare names in for-statement initializers and conditions to limit scope.
+ES.7: Keep common and local names short, and keep uncommon and non-local names longer.
+ES.8: Avoid similar-looking names.
+ES.9: Avoid ALL_CAPS names.
+ES.10: Declare one name (only) per declaration.
+ES.11: Use auto to avoid redundant repetition of type names.
+ES.12: Do not reuse names in nested scopes.
+ES.20: Always initialize an object.
+ES.21: Don’t introduce a variable (or constant) before you need to use it.
+ES.22: Don’t declare a variable until you have a value to initialize it with.
+ES.23: Prefer the {}-initializer syntax.
+ES.24: Use a unique_ptr<T> to hold pointers.
+ES.25: Declare an object const or constexpr unless you want to modify its value later on.
+ES.26: Don’t use a variable for two unrelated purposes.
+ES.27: Use std::array or stack_array for arrays on the stack.
+ES.28: Use lambdas for complex initialization, especially of const variables.
+ES.30: Don’t use macros for program text manipulation.
+ES.31: Don’t use macros for constants or “functions”.
+ES.32: Use ALL_CAPS for all macro names.
+ES.33: If you must use macros, give them unique names.
+ES.34: Don’t define a (C-style) variadic function.
+ES.40: Avoid complicated expressions.
+ES.41: If in doubt about operator precedence, parenthesize.
+ES.42: Keep use of pointers simple and straightforward.
+ES.43: Avoid expressions with undefined order of evaluation.
+ES.44: Don’t depend on order of evaluation of function arguments.
+ES.45: Avoid “magic constants”; use symbolic constants.
+ES.46: Avoid narrowing conversions.
+ES.47: Use nullptr rather than 0 or NULL.
+ES.48: Avoid casts.
+ES.49: If you must use a cast, use a named cast.
+ES.50: Don’t cast away const.
+ES.55: Avoid the need for range checking.
+ES.56: Write std::move() only when you need to explicitly move an object to another scope.
+ES.60: Avoid new and delete outside resource management functions.
+ES.61: Delete arrays using delete[] and non-arrays using delete.
+ES.62: Don’t compare pointers into different arrays.
+ES.63: Don’t slice.
+ES.64: Use the T{e}notation for construction.
+ES.65: Don’t dereference an invalid pointer.
+ES.70: Prefer a switch-statement to an if-statement when there is a choice.
+ES.71: Prefer a range-for-statement to a for-statement when there is a choice.
+ES.72: Prefer a for-statement to a while-statement when there is an obvious loop variable.
+ES.73: Prefer a while-statement to a for-statement when there is no obvious loop variable.
+ES.74: Prefer to declare a loop variable in the initializer part of a for-statement.
+ES.75: Avoid do-statements.
+ES.76: Avoid goto.
+ES.77: Minimize the use of break and continue in loops.
+ES.78: Don’t rely on implicit fallthrough in switch statements.
+ES.79: Use default to handle common cases (only).
+ES.84: Don’t try to declare a local variable with no name.
+ES.85: Make empty statements visible.
+ES.86: Avoid modifying loop control variables inside the body of raw for-loops.
+ES.87: Don’t add redundant == or != to conditions.
+ES.100: Don’t mix signed and unsigned arithmetic.
+ES.101: Use unsigned types for bit manipulation.
+ES.102: Use signed types for arithmetic.
+ES.103: Don’t overflow.
+ES.104: Don’t underflow.
+ES.105: Don’t divide by zero.
+ES.106: Don’t try to avoid negative values by using unsigned.
+ES.107: Don’t use unsigned for subscripts, prefer gsl::index.
