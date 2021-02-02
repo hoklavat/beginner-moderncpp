@@ -55,3 +55,4 @@
 - 49-ExplicitDestructor
 - 50-PolymorphicException
 - 51-OperatorOverloading
+- 52-UserDefinedLiteral
