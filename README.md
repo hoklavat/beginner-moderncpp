@@ -53,3 +53,5 @@
 - 47-TemplateDerivedClass
 - 48-RuleOfFive
 - 49-ExplicitDestructor
+- 50-PolymorphicException
+- 51-OperatorOverloading
