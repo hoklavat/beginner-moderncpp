@@ -401,6 +401,8 @@
 * make sure that copy assignments are safe for self-assignment.
 * you must never throw an exception from destructor.
 * you can catch exception by value, by reference or by pointer.
+* prefer member functions over nonmembers for operations that need access to representation.
+* prefer nonmember functions over members for operations that do not need access to representation.
 
 * Nifty Counter Idiom: 
 * Return Value Optimization: 
