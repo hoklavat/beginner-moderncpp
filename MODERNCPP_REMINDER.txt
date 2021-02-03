@@ -298,7 +298,6 @@
 
 [PHASES OF TRANSLATION]
 
-[STANDARD LIBRARY]
 
 [LIFETIME]
 * Automatic: created when its definition is encountered and destroyed when its name goes out of scope.
@@ -314,6 +313,124 @@
 * throwing uncaught exception
 * violating noexcept
 * calling quick_exit()
+
+[STANDARD LIBRARY]
+* Concepts library
+   - <concepts> Fundamental library concepts. (C++20)
+* Coroutines library
+   - <coroutine> Coroutine support library. (C++20)
+* Utilities library
+   - <cstdlib> General purpose utilities: program control, dynamic memory allocation, random numbers, sort and search.
+   - <csignal> Functions and macro constants for signal management.
+   - <csetjmp> Macro (and function) that saves (and jumps) to an execution context.
+   - <cstdarg> Handling of variable length argument lists.
+   - <typeinfo> Runtime type information utilities.
+   - <typeindex> std::type_index. (C++11)
+   - <type_traits> Compile-time type information. (C++11)
+   - <bitset> std::bitset class template.
+   - <functional> Function objects, Function invocations, Bind operations and Reference wrappers.
+   - <utility> Various utility components.
+   - <ctime> C-style time/date utilites.
+   - <chrono> C++ time utilites. (C++11)
+   - <cstddef> Standard macros and typedefs.
+   - <initializer_list> std::initializer_list class template. (C++11)
+   - <tuple> std::tuple class template. (C++11)
+   - <any> std::any class. (C++17)
+   - <optional> std::optional class template. (C++17)
+   - <variant> std::variant class template. (C++17)
+   - <compare> Three-way comparison operator support. (C++20)
+   - <version> Supplies implementation-dependent library information. (C++20)
+   - <source_location> Supplies means to obtain source code location. (C++20)
+* Dynamic memory management
+   - <new> Low-level memory management utilities.
+   - <memory> High-level memory management utilities.
+   - <scoped_allocator> Nested allocator class. (C++11)
+   - <memory_resource> Polymorphic allocators and memory resources. (C++17)
+* Numeric limits
+   - <climits> Limits of integral types.
+   - <cfloat> Limits of floating-point types.
+   - <cstdint> Fixed-width integer types and limits of other types. (C++11)
+   - <cinttypes> Formatting macros, intmax_t and uintmax_t math and conversions. (C++11)
+   - <limits> Uniform way to query properties of arithmetic types.
+* Error handling
+   - <exception> Exception handling utilities.
+   - <stdexcept> Standard exception objects.
+   - <cassert> Conditionally compiled macro that compares its argument to zero.
+   - <system_error> Defines std::error_code, a platform-dependent error code. (C++11)
+   - <cerrno> Macro containing the last error number.
+* Strings library
+   - <cctype> Functions to determine the category of narrow characters.
+   - <cwctype> Functions to determine the category of wide characters.
+   - <cstring> Various narrow character string handling functions.
+   - <cwchar> Various wide and multibyte string handling functions.
+   - <cuchar> C-style Unicode character conversion functions. (C++11)
+   - <string> std::basic_string class template.
+   - <string_view> std::basic_string_view class template. (C++17)
+   - <charconv> std::to_chars and std::from_chars. (C++17)
+   - <format> Formatting library including std::format. (C++20)
+* Containers library
+   - <array> std::array container. (C++11)
+   - <vector> std::vector container.
+   - <deque> std::deque container.
+   - <list> std::list container.
+   - <forward_list> std::forward_list container. (C++11)
+   - <set> std::set and std::multiset associative containers.
+   - <map> std::map and std::multimap associative containers.
+   - <unordered_set> std::unordered_set and std::unordered_multiset unordered associative containers. (C++11)
+   - <unordered_map> std::unordered_map and std::unordered_multimap unordered associative containers. (C++11)
+   - <stack> std::stack container adaptor.
+   - <queue> std::queue and std::priority_queue container adaptors.
+   - <span> std::span view. (C++20)
+* Iterators library
+   - <iterator> Range iterators.
+* Ranges library
+   - <ranges> Range access, primitives, requirements, utilities and adaptors. (C++20)
+* Algorithms library
+   - <algorithm> Algorithms that operate on ranges.
+   - <execution> Predefined execution policies for parallel versions of the algorithms. (C++17)
+* Numerics library
+   - <cmath> Common mathematics functions.
+   - <complex> Complex number type.
+   - <valarray> Class for representing and manipulating arrays of values.
+   - <random> Random number generators and distributions. (C++11)
+   - <numeric> Numeric operations on values in ranges.
+   - <ratio> Compile-time rational arithmetic. (C++11)
+   - <cfenv> Floating-point environment access functions. (C++11)
+   - <bit> Bit manipulation functions. (C++20)
+   - <numbers>(C++20)Math constants.
+* Localization library
+   - <locale> Localization utilities.
+   - <clocale> C localization utilities.
+   - <codecvt> Unicode conversion facilities.(C++11, deprecated in C++17)
+* Input/output library
+   - <iosfwd> Forward declarations of all classes in the input/output library.
+   - <ios> std::ios_base class, std::basic_ios class template and several typedefs.
+   - <istream> std::basic_istream class template and several typedefs.
+   - <ostream> std::basic_ostream, std::basic_iostream class templates and several typedefs.
+   - <iostream> Several standard stream objects.
+   - <fstream> std::basic_fstream, std::basic_ifstream, std::basic_ofstream class templates and several typedefs.
+   - <sstream> std::basic_stringstream, std::basic_istringstream, std::basic_ostringstream class templates and several typedefs.
+   - <syncstream> std::basic_osyncstream, std::basic_syncbuf, and typedefs. (C++20)
+   - <strstream> std::strstream, std::istrstream, std::ostrstream. (deprecated in C++98)
+   - <iomanip> Helper functions to control the format of input and output.
+   - <streambuf> std::basic_streambuf class template.
+   - <cstdio> C-style input-output functions.
+* Filesystem library
+   - <filesystem> std::path class and supporting functions. (C++17)
+* Regular Expressions library
+   - <regex> Classes, algorithms and iterators to support regular expression processing. (C++11)
+* Atomic Operations library
+   - <atomic> Atomic operations library. (C++11)
+* Thread support library
+   - <thread> std::thread class and supporting functions. (C++11)
+   - <stop_token> Stop tokens for std::jthread. (C++20)
+   - <mutex> Mutual exclusion primitives. (C++11)
+   - <shared_mutex> Shared mutual exclusion primitives. (C++14)
+   - <future> Primitives for asynchronous computations. (C++11)
+   - <condition_variable> Thread waiting conditions. (C++11)
+   - <semaphore> Semaphores. (C++20)
+   - <latch> Latches. (C++20)
+   - <barrier> Barriers. (C++20)
 
 [NOTES]
 * prefer {} initialization over alternatives unless you have strong reason not to.
