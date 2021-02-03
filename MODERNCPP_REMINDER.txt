@@ -21,7 +21,8 @@
 * Default Constructor: constructor that can be called with no arguments, or that can take arguments, provided they are given default values. 
 * Definition: declarations that fully define entity introduced by declaration. 
 * Dereferencing: referring to object pointed to by pointer. indirection. 
-* Dynamic Binding: member function is selected dynamically (at run-time) based on type of object, not type of pointer/reference to that object. 
+* Dynamic Binding: member function is selected dynamically (at run-time) based on type of object, not type of pointer/reference to that object.
+* Dynamic-Data: member object’s exact class can change dynamically over time.
 * Encapsulation: preventing unauthorized access to some piece of information or functionality. 
 * Enumeration: type that can hold set of integer values specified by user. 
 * Escape Sequence: used to represent certain special characters within string literals and character literals. 
@@ -67,7 +68,8 @@
 * One Definition Rule: ODR. there must be exactly one definition. definitions in different translation units must be identical. 
 * Operator: defines type of operation between operands. 
 * Overloading: using same name for operations on different types is called overloading. 
-* Parameterized Type: type that is parameterized over another type or some value. class template or genericity. 
+* Parameterized Type: type that is parameterized over another type or some value. class template or genericity.
+* Per-Object-Data: any given object of class can instantiate different conformal (same type) member object upon initialization (wrapper), and exact class of member object is static property of object that wraps it.
 * PIMPL: pointer to implementation. 
 * Plain Old Data: POD. contiguous sequence of bytes in memory. raw data. allows block operations. 
 * Pointer: points to object represents address of first byte in memory occupied by object. 
@@ -105,7 +107,8 @@
 * Union: struct in which all members are allocated at same address so that it occupies only as much space as its largest member. 
 * Variable: declared objects and declared references that are not non-static data members. 
 * Variadic Template: allows to handle arbitrary number of arbitrary types. 
-* Virtual Table: data structure for classes that have virtual functions to handle dynamic binding. 
+* Virtual Data: definition (class) of member object is overridable in derived classes provided its declaration (type) remains same, and this overriddenness is static property of derived class.
+* Virtual Table: data structure for classes that have virtual functions to handle dynamic binding.
 
 [C++ ENTITIES]
 * Type
@@ -520,6 +523,8 @@
 * you can catch exception by value, by reference or by pointer.
 * prefer member functions over nonmembers for operations that need access to representation.
 * prefer nonmember functions over members for operations that do not need access to representation.
+* virtual member function means declaration must stay same in derived classes, but the definition can be overridden.
+* unless compelling reasons are given to contrary, member objects should be by value and parameters should be by reference.
 
 * Nifty Counter Idiom: 
 * Return Value Optimization: 
