@@ -56,3 +56,8 @@
 - 50-PolymorphicException
 - 51-OperatorOverloading
 - 52-UserDefinedLiteral
+- 53-RangedFor
+- 54-Override
+- 55-UsingDirective
+- 56-InheritingConstructor
+- 57-CovariantReturn

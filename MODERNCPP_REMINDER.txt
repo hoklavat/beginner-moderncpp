@@ -8,14 +8,16 @@
 * Assertion: condition connected to point in program, that always should evaluate to true at that point in code execution. 
 * Block: block is section of code delimited by {} pair. 
 * Casting: explicit type conversion. 
-* Class: user-defined type that can have data member, member function, nested types, enumerators, member templates. 
+* Class: user-defined type that can have data member, member function, nested types, enumerators, member templates.
+* Class Hierarchy: set of related classes.
 * Comment: used as notes by humans that read source code. ignored by compiler. 
 * Concept: perform compile-time validation of template arguments and perform function dispatch based on properties of types. 
 * Concrete Class: representation is part of definition. 
 * Const Correctness: prevent constant objects from getting mutated using const keyword. 
 * Constant Expression: expression that compiler can evaluate. 
 * Constructor: builds objects from predefined types. explicit purpose is initializing objects. 
-* Container: generic collection of class templates and algorithms that allow programmers to easily implement common data structures. 
+* Container: generic collection of class templates and algorithms that allow programmers to easily implement common data structures.
+* Contextual Keyword: has special meaning in few contexts but can be used as ordinary identifier elsewhere. example: final, override.
 * Copy Constructor: makes copy of object without modifying it. 
 * Declaration: introduce names into program. 
 * Default Constructor: constructor that can be called with no arguments, or that can take arguments, provided they are given default values. 
@@ -38,11 +40,13 @@
 * Header: included source file into current source file. 
 * Identifier: used to name entities. unqualified, qualified. 
 * Implementation Defined: each implementation must provide specific, well-defined behavior for construct and that behavior must be documented. 
+* Implementation Inheritance: save implementation effort by sharing facilities provided by base class.
 * Initialization: provides initial value of variable at time of construction. 
 * Initializer List: allows to handle arbitrary number of arguments of single type. 
 * Inline Function: compiler attempts to generate code for a call of function inline rather than laying down code for function once and then calling through usual function call mechanism. 
 * Interface: class with no data and where all member functions are pure virtual functions. 
-* Internal Linkage: name that can be referred to only in translation unit in which it is defined. not accessible from other source files. static. 
+* Interface Inheritance: allow different derived classes to be used interchangeably through interface provided by common base class. run-time polymorphism. dynamic polymorphism.
+* Internal Linkage: name that can be referred to only in translation unit in which it is defined. not accessible from other source files. static.
 * Invariant: invariant used for constraining objects of class. 
 * Iterator: specifies that objects of type can be incremented and dereferenced. 
 * Keyword: reserved keywords those are not available for redefinition or overloading. 
@@ -68,6 +72,7 @@
 * One Definition Rule: ODR. there must be exactly one definition. definitions in different translation units must be identical. 
 * Operator: defines type of operation between operands. 
 * Overloading: using same name for operations on different types is called overloading. 
+* Override: function from derived class with same name and same set of argument types as virtual function in base.
 * Parameterized Type: type that is parameterized over another type or some value. class template or genericity.
 * Per-Object-Data: any given object of class can instantiate different conformal (same type) member object upon initialization (wrapper), and exact class of member object is static property of object that wraps it.
 * PIMPL: pointer to implementation. 
@@ -106,7 +111,8 @@
 * Undefined Behaviour: renders entire program meaningless if certain rules of language are violated. 
 * Union: struct in which all members are allocated at same address so that it occupies only as much space as its largest member. 
 * Variable: declared objects and declared references that are not non-static data members. 
-* Variadic Template: allows to handle arbitrary number of arbitrary types. 
+* Variadic Template: allows to handle arbitrary number of arbitrary types.
+* Virtual Constructor: function that indirectly construct objects.
 * Virtual Data: definition (class) of member object is overridable in derived classes provided its declaration (type) remains same, and this overriddenness is static property of derived class.
 * Virtual Table: data structure for classes that have virtual functions to handle dynamic binding.
 
@@ -525,6 +531,7 @@
 * prefer nonmember functions over members for operations that do not need access to representation.
 * virtual member function means declaration must stay same in derived classes, but the definition can be overridden.
 * unless compelling reasons are given to contrary, member objects should be by value and parameters should be by reference.
+* it is typically bad idea to call virtual function from constructor or destructor.
 
 * Nifty Counter Idiom: 
 * Return Value Optimization: 
