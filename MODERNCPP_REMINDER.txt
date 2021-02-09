@@ -18,6 +18,7 @@
 * Constructor: builds objects from predefined types. explicit purpose is initializing objects. 
 * Container: generic collection of class templates and algorithms that allow programmers to easily implement common data structures.
 * Contextual Keyword: has special meaning in few contexts but can be used as ordinary identifier elsewhere. example: final, override.
+* Contravariance: assigning pointer to member of base class to pointer to member of derived class.
 * Copy Constructor: makes copy of object without modifying it. 
 * Declaration: introduce names into program. 
 * Default Constructor: constructor that can be called with no arguments, or that can take arguments, provided they are given default values. 
