@@ -61,7 +61,8 @@
 * LValue: expression that refers to object. something that can be on left-hand side of assignment. lvalue(i&!m) glvalue 
 * Memory Model: defines semantics of computer memory storage for purpose of abstract machine. 
 * Module: help divide large amounts of code into logical parts. 
-* Movable: program allowed to move object value to another location and leave this object in valid but unspecified state. (m) 
+* Movable: program allowed to move object value to another location and leave this object in valid but unspecified state. (m)
+* Multiple Inheritance: deriving directly from more than one class.
 * Name: denotes entity is introduced into program by declaration. identifier, overloaded operator, user defined conversion function, user defined literal, template name. 
 * Name Lookup: procedure by which name, when encountered in a program, is associated with declaration that introduced it. 
 * Named Constructor: provide public static methods that return object. 
@@ -533,6 +534,7 @@
 * virtual member function means declaration must stay same in derived classes, but the definition can be overridden.
 * unless compelling reasons are given to contrary, member objects should be by value and parameters should be by reference.
 * it is typically bad idea to call virtual function from constructor or destructor.
+* interface virtual destructor ensures proper cleanup of data that will be defined in derived classes.
 
 * Nifty Counter Idiom: 
 * Return Value Optimization: 
