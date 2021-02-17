@@ -61,3 +61,6 @@
 - 55-UsingDirective
 - 56-InheritingConstructor
 - 57-CovariantReturn
+- 58-PointerToMember
+- 59-AmbiguityResolution
+- 60-DynamicCast
