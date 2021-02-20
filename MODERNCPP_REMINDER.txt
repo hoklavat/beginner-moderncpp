@@ -24,7 +24,8 @@
 * Declaration: introduce names into program. 
 * Default Constructor: constructor that can be called with no arguments, or that can take arguments, provided they are given default values. 
 * Definition: declarations that fully define entity introduced by declaration. 
-* Dereferencing: referring to object pointed to by pointer. indirection. 
+* Dereferencing: referring to object pointed to by pointer. indirection.
+* Double Dispatch: shows how to select virtual function based on two types. Visitors shows how to use double dispatch to add multiple functions to class hierarchy with only single additional virtual function in hierarchy.
 * Downcast: casting from base class to derived class.
 * Dynamic Binding: member function is selected dynamically (at run-time) based on type of object, not type of pointer/reference to that object.
 * Dynamic-Data: member object’s exact class can change dynamically over time.
@@ -106,7 +107,9 @@
 * Structure: aggregate of elements of arbitrary types. 
 * Suffix: affix which is placed after stem of word. 
 * Syntax Analysis: Parsing. set of rules, principles, and processes that govern structure of sentences in language. takes input from lexical analyzer in form of token streams and analyzes source code (token stream) against production rules to detect errors in code. 
-* Template: entity that defines one of following 
+* Template: mechanism that allows type or value to be parameter in definition of class, function, or type alias.
+* Template Instantiation: process of generating class or function from template plus template argument list.
+* Template Specialization: version of template for specific template argument list.
 * Translation Unit: unit is what compiler proper works on and what C++ language rules describe. 
 * Trivial Type: type that has trivial default constructor, copy and move operations. trivial means no need to do work. 
 * Trivially Copyable Type: type that has nontrivial copy operation, move operation, or destructor. can be implemented as bitwise copy. 
