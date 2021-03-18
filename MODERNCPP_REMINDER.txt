@@ -86,25 +86,6 @@
 * Narrowing Conversion: implicit conversion that can result information loss.
 * No Linkage: names that linker does not see, such as names of local variables.
 * Null Pointer: pointer that does not point to object. nullptr.
-* Lambda Expression: simplified notation for defining and using anonymous function object. useful when passing operation as argument to algorithm. example
-* Lexical Analysis: process of converting sequence of characters into sequence of tokens. 
-* Lifetime: for any object or reference there is point of execution of program when its lifetime begins and there is moment when it ends.
-* Linkage: if name has linkage, it refers to same entity as same name introduced by declaration in another scope.
-* Linker: loader. program that binds together separately compiled parts.
-* Literal: tokens that represent constant values embedded in source code.
-* Literal Type: class with constexpr constructor.
-* LValue: expression that refers to object. something that can be on left-hand side of assignment. lvalue(i&!m) glvalue
-* Memory Model: defines semantics of computer memory storage for purpose of abstract machine.
-* Module: help divide large amounts of code into logical parts.
-* Movable: program allowed to move object value to another location and leave this object in valid but unspecified state. (m)
-* Multiple Inheritance: deriving directly from more than one class.
-* Name: denotes entity is introduced into program by declaration. identifier, overloaded operator, user defined conversion function, user defined literal, template name.
-* Name Lookup: procedure by which name, when encountered in program, is associated with declaration that introduced it.
-* Named Constructor: provide public static methods that return object.
-* Named Requirements: used in normative text of C++ standard to define expectations of standard library.
-* Narrowing Conversion: implicit conversion that can result information loss. example
-* No Linkage: names that linker does not see, such as names of local variables.
-* Null Pointer: pointer that does not point to object. nullptr.
 * Object: is region of storage that has size, alignment requirement, storage duration, lifetime, type, value, name.
 * One Definition Rule: ODR. there must be exactly one definition. definitions in different translation units must be identical.
 * Operator: defines type of operation between operands.
@@ -124,18 +105,6 @@
 * RAII: Resource Acquisition Is Initialization. when object is constructed on free store, its pointer placed into manager object with destructor that will destroy it. avoids resource leaks and makes exception error handling simple.
 * Reference: alias for object that is usually implemented to hold machine address of object. alternative name for object. lvalue/const/rvalue references.
 * Rule of Five: if class has destructor that performs nontrivial task, such as free-store deallocation or lock release, class is likely to need full complement of functions: constructor, copy constructor/assignment, move constructor/assignment.
-* RValue: value that is not lvalue.
-* Scope: each name is valid in discontiguous portion of source code called its scope.
-* Semantic Analysis: study of meaning. relationship between form and meaning. interpret symbols, their types and relations with each other. judges whether syntax structure constructed in source program derives any meaning or not.
-* SFINAE: Substitution Failure Is Not Error. if types do not match exactly in overloading resolution, conversions are not considered as error and template is simply dropped from set of viable functions.
-* Shallow Copy: copy and original objects can change their state. shared state.
-* Stack Unwinding: process of removing function entries from function call stack at run-time.
-* Preprocessor: preprocessing directives control behavior of preprocessor that is executed at translation phase 4.
-* Promotion: implicit conversion that preserve values. example
-* Pure Virtual Function: function that must be overridden in derived class and need not be defined.
-* RAII: Resource Acquisition Is Initialization. when object is constructed on free store, its pointer placed into manager object with destructor that will destroy it.  avoids resource leaks and making error handling using exceptions simple and safe.
-* Reference: alias for object, is usually implemented to hold machine address of object. alternative name for object. lvalue/const/rvalue references.
-* Rule of Five: if class has destructor that performs nontrivial task, such as free-store deallocation or lock release, class is likely to need full complement of functions
 * RValue: value that is not lvalue. rvalue(m), prvalue
 * Scope: each name is valid in discontiguous portion of source code called its scope.
 * Semantic Analysis: study of meaning. relationship between form and meaning. interpret symbols, their types, and their relations with each other. judges whether syntax structure constructed in source program derives any meaning or not.
@@ -151,16 +120,6 @@
 * Structure: aggregate of elements of arbitrary types.
 * Suffix: affix which is placed after stem of word.
 * Syntax Analysis: Parsing. set of rules, principles and processes that govern structure of sentences in language. takes input from lexical analyzer in form of token streams and analyzes them for errors.
-* Template: mechanism that allows type or value to be parameter in definition of class, function, or type alias.
-* Template Instantiation: process of generating class or function from template plus template argument list.
-* Template Specialization: versioning of template for specific template argument list.
-* STL: standard templates library. library that consists mainly of container classes, along with some iterators and algorithms to work with contents of these containers.
-* Storage Duration: determines how storage for object is allocated and deallocated.
-* Structure: aggregate of elements of arbitrary types.
-* Suffix: affix which is placed after stem of word.
-* Syntax Analysis: Parsing. set of rules, principles, and processes that govern structure of sentences in language. takes input from lexical analyzer in form of token streams and analyzes source code (token stream) against production rules to detect 
-
-errors in code.
 * Template: mechanism that allows type or value to be parameter in definition of class, function, or type alias.
 * Template Instantiation: process of generating class or function from template plus template argument list.
 * Template Metaprogramming: focuses more on generative techniques (seeing templates as type and function generators) and relying on type functions to express compile-time computation.
