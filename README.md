@@ -64,3 +64,7 @@
 - 58-PointerToMember
 - 59-AmbiguityResolution
 - 60-DynamicCast
+- 61-DoubleDispatch
+- 62-Visitors
+- 63-DefaultFunctionTemplateArguments
+- 64-TemplateSpecialization
