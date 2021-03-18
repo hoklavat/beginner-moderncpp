@@ -306,14 +306,12 @@
 
 [PREDEFINED MACROS]
 * __cplusplus: defined in C++ compilation and not in C compilation.
-* __cplusplus: defined in C++ compilation and not in C compilation.
 * __DATE__: date in ‘‘yyyy:mm:dd’’ format.
 * __TIME__: time in ‘‘hh:mm:ss’’ format.
 * __FILE__: name of current source file.
 * __LINE__: source line number within current source file.
 * __FUNC__: implementation-defined C-style string naming current function.
 * __STDC_HOSTED__: 1 if implementation is hosted; otherwise 0.
-* __STDC__: defined in C compilation and not in C++ compilation.
 * __STDC__: defined in C compilation and not in C++ compilation.
 * __STDC_MB_MIGHT_NEQ_WC__: 1 if in encoding for wchar_t, member of basic character set might have code value that differs from its value as ordinary character literal.
 * __STDCPP_STRICT_POINTER_SAFETY__: 1 if implementation has strict pointer safety otherwise undefined.
@@ -385,11 +383,6 @@
 * Strings library
    - <cctype> Functions to determine category of narrow characters.
    - <cwctype> Functions to determine category of wide characters.
-   - <system_error> Defines std::error_code, platform-dependent error code. (C++11)
-   - <cerrno> Macro containing last error number.
-* Strings library
-   - <cctype> Functions to determine category of narrow characters.
-   - <cwctype> Functions to determine category of wide characters.
    - <cstring> Various narrow character string handling functions.
    - <cwchar> Various wide and multibyte string handling functions.
    - <cuchar> C-style Unicode character conversion functions. (C++11)
@@ -417,7 +410,6 @@
 * Algorithms library
    - <algorithm> Algorithms that operate on ranges.
    - <execution> Predefined execution policies for parallel versions of algorithms. (C++17)
-   - <execution> Predefined execution policies for parallel versions of algorithms. (C++17)
 * Numerics library
    - <cmath> Common mathematics functions.
    - <complex> Complex number type.
@@ -427,11 +419,11 @@
    - <ratio> Compile-time rational arithmetic. (C++11)
    - <cfenv> Floating-point environment access functions. (C++11)
    - <bit> Bit manipulation functions. (C++20)
-   - <numbers>(C++20)Math constants.
+   - <numbers> Math constants. (C++20)
 * Localization library
    - <locale> Localization utilities.
    - <clocale> C localization utilities.
-   - <codecvt> Unicode conversion facilities.(C++11, deprecated in C++17)
+   - <codecvt> Unicode conversion facilities. (C++11, deprecated in C++17)
 * Input/output library
    - <iosfwd> Forward declarations of all classes in input/output library.
    - <ios> std::ios_base class, std::basic_ios class template and several typedefs.
