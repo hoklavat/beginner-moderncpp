@@ -15,11 +15,6 @@
 * Concrete Class: class whose representation is part of definition.
 * Const Correctness: prevent constant objects from getting mutated using const keyword.
 * Constant Expression: expression that compiler can evaluate. constexpr.
-* Comment: used as notes by humans that read source code. ignored by compiler.
-* Concept: perform compile-time validation of template arguments and perform function dispatch based on properties of types.
-* Concrete Class: representation is part of definition.
-* Const Correctness: prevent constant objects from getting mutated using const keyword.
-* Constant Expression: expression that compiler can evaluate.
 * Constructor: builds objects from predefined types. explicit purpose is initializing objects.
 * Container: generic collection of class templates and algorithms that allow programmers to easily implement common data structures.
 * Contextual Keyword: has special meaning in few contexts but can be used as ordinary identifier elsewhere. example: final, override.
@@ -45,12 +40,9 @@
 * Friend: function or class that is allowed to access to another class or function.
 * Full Expression: expression that is not subexpression of some other expression.
 * Function: entity that associates sequence of statements with name and required parameters.
-* Handle: technique that will uniquely identify and get to another object.
-* Has Identity: program has name of pointer or reference to object.
-* Function: entities that associate sequence of statements with name and required parameters.
 * Generic Programming: design of general algorithms implemented using templates.
 * Handle: technique that will uniquely identify and get to another object.
-* Has Identity: program has name of pointer or reference to object. (i)
+* Has Identity: program has name of pointer or reference to object.
 * Header: included source file into current source file.
 * Identifier: used to name entities. unqualified, qualified.
 * Implementation Defined: each implementation must provide specific, well-defined behavior for construct and that behavior must be documented.
@@ -60,9 +52,6 @@
 * Inline Function: compiler attempts to generate code for call of function inline rather than laying down code for function once and then calling through usual function call mechanism.
 * Interface: class with no data and where all member functions are pure virtual functions.
 * Interface Inheritance: allow different derived classes to be used interchangeably through interface provided by common base class. run-time/dynamic polymorphism.
-* Inline Function: compiler attempts to generate code for call of function inline rather than laying down code for function once and then calling through usual function call mechanism.
-* Interface: class with no data and where all member functions are pure virtual functions.
-* Interface Inheritance: allow different derived classes to be used interchangeably through interface provided by common base class. run-time polymorphism. dynamic polymorphism.
 * Internal Linkage: name that can be referred to only in translation unit in which it is defined. not accessible from other source files. static.
 * Invariant: invariant used for constraining objects of class.
 * Iterator: specifies that objects of type can be incremented and dereferenced.
