@@ -1,36 +1,25 @@
 ﻿*** MODERN CPP ***
 
-<<<<<<< HEAD
 [CONCEPTS]
 * Abstract Class: no objects of class can be directly created.
 * Alignment: bytes used to hold object must have proper alignment for hardware to access it efficiently.
 * Argument Dependent Lookup: if function isn’t found in context of its use, it is looked in namespaces of its arguments.
 * As If Rule: allowing any code transformations that do not change observable behavior of program.
-=======
-[BASIC TERMS]
-* Abstract Class: no objects of class can be directly created.
-* Alignment: bytes used to hold object must have proper alignment for hardware to access it efficiently.
-* Argument Dependent Lookup: if function isn’t found in context of its use, it is looked in namespaces of its arguments.
-* As If Rule: allows any and all code transformations that do not change observable behavior of program.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 * Assertion: condition connected to point in program, that always should evaluate to true at that point in code execution.
 * Block: block is section of code delimited by {} pair.
 * Casting: explicit type conversion.
 * Class: user-defined type that can have data member, member function, nested types, enumerators, member templates.
 * Class Hierarchy: set of related classes. class is constructed from lattice of base classes.
-<<<<<<< HEAD
 * Comment: used as descriptive notes by humans that read source code. ignored by compiler.
 * Concept: performs compile-time validation of template arguments and perform function dispatch based on properties of types.
 * Concrete Class: class whose representation is part of definition.
 * Const Correctness: prevent constant objects from getting mutated using const keyword.
 * Constant Expression: expression that compiler can evaluate. constexpr.
-=======
 * Comment: used as notes by humans that read source code. ignored by compiler.
 * Concept: perform compile-time validation of template arguments and perform function dispatch based on properties of types.
 * Concrete Class: representation is part of definition.
 * Const Correctness: prevent constant objects from getting mutated using const keyword.
 * Constant Expression: expression that compiler can evaluate.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 * Constructor: builds objects from predefined types. explicit purpose is initializing objects.
 * Container: generic collection of class templates and algorithms that allow programmers to easily implement common data structures.
 * Contextual Keyword: has special meaning in few contexts but can be used as ordinary identifier elsewhere. example: final, override.
@@ -38,10 +27,7 @@
 * Copy Constructor: makes copy of object without modifying it.
 * Cross Cast: cast that goes from base class to sibling class.
 * Declaration: introduce names into program.
-<<<<<<< HEAD
 * Deep Copy: 
-=======
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 * Default Constructor: constructor that can be called with no arguments, or that can take arguments, provided they are given default values.
 * Definition: declarations that fully define entity introduced by declaration.
 * Dereferencing: referring to object pointed to by pointer. indirection.
@@ -58,36 +44,29 @@
 * Feature Testing: defines set of preprocessor macros those are intended as simple and portable way to detect presence of said features.
 * Friend: function or class that is allowed to access to another class or function.
 * Full Expression: expression that is not subexpression of some other expression.
-<<<<<<< HEAD
 * Function: entity that associates sequence of statements with name and required parameters.
 * Handle: technique that will uniquely identify and get to another object.
 * Has Identity: program has name of pointer or reference to object.
-=======
 * Function: entities that associate sequence of statements with name and required parameters.
 * Generic Programming: design of general algorithms implemented using templates.
 * Handle: technique that will uniquely identify and get to another object.
 * Has Identity: program has name of pointer or reference to object. (i)
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 * Header: included source file into current source file.
 * Identifier: used to name entities. unqualified, qualified.
 * Implementation Defined: each implementation must provide specific, well-defined behavior for construct and that behavior must be documented.
 * Implementation Inheritance: save implementation effort by sharing facilities provided by base class.
 * Initialization: provides initial value of variable at time of construction.
 * Initializer List: allows to handle arbitrary number of arguments of single type.
-<<<<<<< HEAD
 * Inline Function: compiler attempts to generate code for call of function inline rather than laying down code for function once and then calling through usual function call mechanism.
 * Interface: class with no data and where all member functions are pure virtual functions.
 * Interface Inheritance: allow different derived classes to be used interchangeably through interface provided by common base class. run-time/dynamic polymorphism.
-=======
-* Inline Function: compiler attempts to generate code for a call of function inline rather than laying down code for function once and then calling through usual function call mechanism.
+* Inline Function: compiler attempts to generate code for call of function inline rather than laying down code for function once and then calling through usual function call mechanism.
 * Interface: class with no data and where all member functions are pure virtual functions.
 * Interface Inheritance: allow different derived classes to be used interchangeably through interface provided by common base class. run-time polymorphism. dynamic polymorphism.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 * Internal Linkage: name that can be referred to only in translation unit in which it is defined. not accessible from other source files. static.
 * Invariant: invariant used for constraining objects of class.
 * Iterator: specifies that objects of type can be incremented and dereferenced.
 * Keyword: reserved keywords those are not available for redefinition or overloading.
-<<<<<<< HEAD
 * Lambda Expression: simplified notation for defining and using anonymous function object. useful when passing operation as argument to algorithm.
 * Lexical Analysis: process of converting sequence of characters into sequence of tokens.
 * Lifetime: for any object or reference there is point of execution of program when its lifetime begins and there is moment when it ends.
@@ -107,9 +86,8 @@
 * Narrowing Conversion: implicit conversion that can result information loss.
 * No Linkage: names that linker does not see, such as names of local variables.
 * Null Pointer: pointer that does not point to object. nullptr.
-=======
 * Lambda Expression: simplified notation for defining and using anonymous function object. useful when passing operation as argument to algorithm. example
-* Lexical Analysis: process of converting sequence of characters into sequence of tokens. takes modified source code from language preprocessors that are written in form of sentences. breaks these syntaxes into series of tokens, by removing any whitespace or comments in source code.
+* Lexical Analysis: process of converting sequence of characters into sequence of tokens. 
 * Lifetime: for any object or reference there is point of execution of program when its lifetime begins and there is moment when it ends.
 * Linkage: if name has linkage, it refers to same entity as same name introduced by declaration in another scope.
 * Linker: loader. program that binds together separately compiled parts.
@@ -121,13 +99,12 @@
 * Movable: program allowed to move object value to another location and leave this object in valid but unspecified state. (m)
 * Multiple Inheritance: deriving directly from more than one class.
 * Name: denotes entity is introduced into program by declaration. identifier, overloaded operator, user defined conversion function, user defined literal, template name.
-* Name Lookup: procedure by which name, when encountered in a program, is associated with declaration that introduced it.
+* Name Lookup: procedure by which name, when encountered in program, is associated with declaration that introduced it.
 * Named Constructor: provide public static methods that return object.
 * Named Requirements: used in normative text of C++ standard to define expectations of standard library.
 * Narrowing Conversion: implicit conversion that can result information loss. example
 * No Linkage: names that linker does not see, such as names of local variables.
-* Null Pointer: pointer that does not point to an object. nullptr.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
+* Null Pointer: pointer that does not point to object. nullptr.
 * Object: is region of storage that has size, alignment requirement, storage duration, lifetime, type, value, name.
 * One Definition Rule: ODR. there must be exactly one definition. definitions in different translation units must be identical.
 * Operator: defines type of operation between operands.
@@ -141,7 +118,6 @@
 * Postcondition: condition that must always be true just after execution of code.
 * Precondition: condition that must always be true just prior to execution of code.
 * Prefix: affix which is placed before stem of word.
-<<<<<<< HEAD
 * Preprocessor: preprocessing directives control behavior of preprocessor that is executed at translation phase 4.
 * Promotion: implicit conversion that preserve values.
 * Pure Virtual Function: function that must be overridden in derived class and need not be defined.
@@ -154,25 +130,22 @@
 * SFINAE: Substitution Failure Is Not Error. if types do not match exactly in overloading resolution, conversions are not considered as error and template is simply dropped from set of viable functions.
 * Shallow Copy: copy and original objects can change their state. shared state.
 * Stack Unwinding: process of removing function entries from function call stack at run-time.
-=======
-* Preprocessor: preprocessing directives control the behavior of preprocessor that is executed at translation phase 4.
+* Preprocessor: preprocessing directives control behavior of preprocessor that is executed at translation phase 4.
 * Promotion: implicit conversion that preserve values. example
 * Pure Virtual Function: function that must be overridden in derived class and need not be defined.
-* RAII: Resource Acquisition Is Initialization. when object is constructed on free store, its pointer placed into manager object with destructor that will destroy it. this method avoids resource leaks and making error handling using exceptions simple and safe.
+* RAII: Resource Acquisition Is Initialization. when object is constructed on free store, its pointer placed into manager object with destructor that will destroy it.  avoids resource leaks and making error handling using exceptions simple and safe.
 * Reference: alias for object, is usually implemented to hold machine address of object. alternative name for object. lvalue/const/rvalue references.
 * Rule of Five: if class has destructor that performs nontrivial task, such as free-store deallocation or lock release, class is likely to need full complement of functions
 * RValue: value that is not lvalue. rvalue(m), prvalue
 * Scope: each name is valid in discontiguous portion of source code called its scope.
 * Semantic Analysis: study of meaning. relationship between form and meaning. interpret symbols, their types, and their relations with each other. judges whether syntax structure constructed in source program derives any meaning or not.
-* SFINAE: Substitution Failure Is Not An Error. if types do not match exactly in overloading resolution, conversions are not considered and template is simply dropped from set of viable functions.
+* SFINAE: Substitution Failure Is Not Error. if types do not match exactly in overloading resolution, conversions are not considered and template is simply dropped from set of viable functions.
 * Shallow Copy: copy and original objects can change their state. shared state.
 * Stack Unwinding: process of removing function entries from function call stack at run time.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 * Standard Layout Type: 
 * Statement: fragments of program that are executed in sequence.
 * Static Member: variable that is part of class, yet is not part of object of that class. there is only one copy for all objects.
 * Static Typing: legality of member function invocation is checked at earliest possible moment by compiler at compile time.
-<<<<<<< HEAD
 * STL: Standard Templates Library. library that consists mainly of container classes, along with some iterators and algorithms to work with contents of these containers.
 * Storage Duration: determines how storage for object is allocated and deallocated.
 * Structure: aggregate of elements of arbitrary types.
@@ -181,17 +154,17 @@
 * Template: mechanism that allows type or value to be parameter in definition of class, function, or type alias.
 * Template Instantiation: process of generating class or function from template plus template argument list.
 * Template Specialization: versioning of template for specific template argument list.
-=======
 * STL: standard templates library. library that consists mainly of container classes, along with some iterators and algorithms to work with contents of these containers.
 * Storage Duration: determines how storage for object is allocated and deallocated.
 * Structure: aggregate of elements of arbitrary types.
 * Suffix: affix which is placed after stem of word.
-* Syntax Analysis: Parsing. set of rules, principles, and processes that govern structure of sentences in language. takes input from lexical analyzer in form of token streams and analyzes source code (token stream) against production rules to detect errors in code.
+* Syntax Analysis: Parsing. set of rules, principles, and processes that govern structure of sentences in language. takes input from lexical analyzer in form of token streams and analyzes source code (token stream) against production rules to detect 
+
+errors in code.
 * Template: mechanism that allows type or value to be parameter in definition of class, function, or type alias.
 * Template Instantiation: process of generating class or function from template plus template argument list.
 * Template Metaprogramming: focuses more on generative techniques (seeing templates as type and function generators) and relying on type functions to express compile-time computation.
 * Template Specialization: version of template for specific template argument list.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 * Translation Unit: unit is what compiler proper works on and what C++ language rules describe.
 * Trivial Type: type that has trivial default constructor, copy and move operations. trivial means no need to do work.
 * Trivially Copyable Type: type that has nontrivial copy operation, move operation, or destructor. can be implemented as bitwise copy.
@@ -203,17 +176,10 @@
 * Variable: declared objects and declared references that are not non-static data members.
 * Variadic Template: allows to handle arbitrary number of arbitrary types.
 * Virtual Constructor: function that indirectly construct objects.
-<<<<<<< HEAD
 * Virtual Data: definition of member object of class is overridable in derived classes, provided its declaration type remains same, and this overriddenness is static property of derived class.
 * Virtual Table: data structure for classes that have virtual functions to handle dynamic binding.
 
 [ENTITIES]
-=======
-* Virtual Data: definition (class) of member object is overridable in derived classes provided its declaration (type) remains same, and this overriddenness is static property of derived class.
-* Virtual Table: data structure for classes that have virtual functions to handle dynamic binding.
-
-[C++ ENTITIES]
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 * Type
 * Value
 * Reference
@@ -253,7 +219,7 @@
 * Alignment: alignof(type)
 * Heap Allocation: new
 * Heap Deallocation: delete
-* Throe Exception: throw
+* Throw Exception: throw
 * Don't Throw Exception: noexcept
 
 [TOKENS]
@@ -361,11 +327,8 @@
    - catch(exception-declaration){statement-list}
 
 [NAMES]
-<<<<<<< HEAD
 * name is use of one of following to refer to entity or to label;
-=======
-* name is the use of one of the following to refer to an entity or to a label;
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
+* name is use of one of following to refer to entity or to label;
    - identifier,
    - overloaded operator name in function notation,
    - user-defined conversion function name,
@@ -394,22 +357,16 @@
 * const: function may not modify its object.
 
 [PREDEFINED MACROS]
-<<<<<<< HEAD
 * __cplusplus: defined in C++ compilation and not in C compilation.
-=======
-* __cplusplus: defined in a C++ compilation and not in C compilation.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
+* __cplusplus: defined in C++ compilation and not in C compilation.
 * __DATE__: date in ‘‘yyyy:mm:dd’’ format.
 * __TIME__: time in ‘‘hh:mm:ss’’ format.
 * __FILE__: name of current source file.
 * __LINE__: source line number within current source file.
 * __FUNC__: implementation-defined C-style string naming current function.
 * __STDC_HOSTED__: 1 if implementation is hosted; otherwise 0.
-<<<<<<< HEAD
 * __STDC__: defined in C compilation and not in C++ compilation.
-=======
-* __STDC__: defined in C compilation and not in a C++ compilation.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
+* __STDC__: defined in C compilation and not in C++ compilation.
 * __STDC_MB_MIGHT_NEQ_WC__: 1 if in encoding for wchar_t, member of basic character set might have code value that differs from its value as ordinary character literal.
 * __STDCPP_STRICT_POINTER_SAFETY__: 1 if implementation has strict pointer safety otherwise undefined.
 * __STDCPP_THREADS__: 1 if program can have more than one thread of execution; otherwise undefined.
@@ -440,11 +397,8 @@
 * Utilities library
    - <cstdlib> General purpose utilities: program control, dynamic memory allocation, random numbers, sort and search.
    - <csignal> Functions and macro constants for signal management.
-<<<<<<< HEAD
    - <csetjmp> Macro (and function) that saves (and jumps) to execution context.
-=======
-   - <csetjmp> Macro (and function) that saves (and jumps) to an execution context.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
+   - <csetjmp> Macro (and function) that saves (and jumps) to execution context.
    - <cstdarg> Handling of variable length argument lists.
    - <typeinfo> Runtime type information utilities.
    - <typeindex> std::type_index. (C++11)
@@ -478,19 +432,16 @@
    - <exception> Exception handling utilities.
    - <stdexcept> Standard exception objects.
    - <cassert> Conditionally compiled macro that compares its argument to zero.
-<<<<<<< HEAD
    - <system_error> Defines std::error_code, platform-dependent error code. (C++11)
    - <cerrno> Macro containing last error number.
 * Strings library
    - <cctype> Functions to determine category of narrow characters.
    - <cwctype> Functions to determine category of wide characters.
-=======
-   - <system_error> Defines std::error_code, a platform-dependent error code. (C++11)
-   - <cerrno> Macro containing the last error number.
+   - <system_error> Defines std::error_code, platform-dependent error code. (C++11)
+   - <cerrno> Macro containing last error number.
 * Strings library
-   - <cctype> Functions to determine the category of narrow characters.
-   - <cwctype> Functions to determine the category of wide characters.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
+   - <cctype> Functions to determine category of narrow characters.
+   - <cwctype> Functions to determine category of wide characters.
    - <cstring> Various narrow character string handling functions.
    - <cwchar> Various wide and multibyte string handling functions.
    - <cuchar> C-style Unicode character conversion functions. (C++11)
@@ -517,11 +468,8 @@
    - <ranges> Range access, primitives, requirements, utilities and adaptors. (C++20)
 * Algorithms library
    - <algorithm> Algorithms that operate on ranges.
-<<<<<<< HEAD
    - <execution> Predefined execution policies for parallel versions of algorithms. (C++17)
-=======
-   - <execution> Predefined execution policies for parallel versions of the algorithms. (C++17)
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
+   - <execution> Predefined execution policies for parallel versions of algorithms. (C++17)
 * Numerics library
    - <cmath> Common mathematics functions.
    - <complex> Complex number type.
@@ -537,11 +485,7 @@
    - <clocale> C localization utilities.
    - <codecvt> Unicode conversion facilities.(C++11, deprecated in C++17)
 * Input/output library
-<<<<<<< HEAD
    - <iosfwd> Forward declarations of all classes in input/output library.
-=======
-   - <iosfwd> Forward declarations of all classes in the input/output library.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
    - <ios> std::ios_base class, std::basic_ios class template and several typedefs.
    - <istream> std::basic_istream class template and several typedefs.
    - <ostream> std::basic_ostream, std::basic_iostream class templates and several typedefs.
@@ -550,11 +494,7 @@
    - <sstream> std::basic_stringstream, std::basic_istringstream, std::basic_ostringstream class templates and several typedefs.
    - <syncstream> std::basic_osyncstream, std::basic_syncbuf, and typedefs. (C++20)
    - <strstream> std::strstream, std::istrstream, std::ostrstream. (deprecated in C++98)
-<<<<<<< HEAD
    - <iomanip> Helper functions to control format of input and output.
-=======
-   - <iomanip> Helper functions to control the format of input and output.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
    - <streambuf> std::basic_streambuf class template.
    - <cstdio> C-style input-output functions.
 * Filesystem library
@@ -583,11 +523,8 @@
 * lifetime of object starts when its constructor completes and ends when its destructor starts executing.
 * lay out structure data members with larger members before smaller ones.
 * operators && and || will not evaluate their second argument unless doing so is necessary.
-<<<<<<< HEAD
 * logical benefits of declaring variables in conditions, doing so also yields most compact source code.
-=======
-* logical benefits of declaring variables in conditions, doing so also yields the most compact source code.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
+* logical benefits of declaring variables in conditions, doing so also yields most compact source code.
 * don’t declare variable until you have value to initialize it with.
 * for casting to boolean, nonzero value converts to true, zero value converts to false.
 * reference can’t be separated from referent.
@@ -614,11 +551,7 @@
 * derived class destructor automatically invokes destructors for base class subobjects.
 * self-assignment is not valid for move assignment.
 * none overloadable operators are; .  ::  ?:  sizeof
-<<<<<<< HEAD
 * stack unwinding: process of passing exception up stack from point of throw to handler.
-=======
-* stack unwinding: process of passing the exception up stack from point of throw to handler.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 * rethrow is indicated by throw without operand.
 * constructor itself can catch sexceptions by enclosing complete function body,including member initializer list, in try-block.
 * destructor should never throw exception.
@@ -647,11 +580,7 @@
 * by default, copy constructor and copy assignment of class object is copy of each member.
 * struct is class in which members are by default public.
 * prefer {} notation over () notation for constructor initialization.
-<<<<<<< HEAD
 * initialization with = is considered copy initialization.
-=======
-* initialization with an = is considered copy initialization.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 * declare constructor that can be called with single argument explicit.
 * const does not apply (transitively) to objects accessed through pointers or references.
 * nested class can refer to types and static members of its enclosing class, but has no notion of current object of enclosing class.
@@ -670,7 +599,6 @@
 * copy operations should provide equivalence and independence.
 * if class is used as base class, protect against slicing.
 * make sure that copy assignments are safe for self-assignment.
-<<<<<<< HEAD
 * you must never throw exception from destructor.
 * you can catch exception by value, by reference or by pointer.
 * prefer member functions over nonmembers for operations that need access to representation.
@@ -679,17 +607,7 @@
 * unless compelling reasons are given to contrary, member objects should be by value and parameters should be by reference.
 * it is typically bad idea to call virtual function from constructor or destructor.
 * interface virtual destructor ensures proper cleanup of data that will be defined in derived classes.
-=======
-* you must never throw an exception from destructor.
-* you can catch exception by value, by reference or by pointer.
-* prefer member functions over nonmembers for operations that need access to representation.
-* prefer nonmember functions over members for operations that do not need access to representation.
-* virtual member function means declaration must stay same in derived classes, but the definition can be overridden.
-* unless compelling reasons are given to contrary, member objects should be by value and parameters should be by reference.
-* it is typically bad idea to call virtual function from constructor or destructor.
-* interface virtual destructor ensures proper cleanup of data that will be defined in derived classes.
 * member template cannot be virtual.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 
 
 * Nifty Counter Idiom:
@@ -700,22 +618,14 @@
 P.1: Express ideas directly in code.
 P.2: Write in ISO Standard C++.
 P.3: Express intent.
-<<<<<<< HEAD
 P.4: Ideally, program should be statically type safe.
-=======
-P.4: Ideally, a program should be statically type safe.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 P.5: Prefer compile-time checking to run-time checking.
 P.6: What cannot be checked at compile time should be checkable at run time.
 P.7: Catch run-time errors early.
 P.8: Don’t leak any resources.
 P.9: Don’t waste time or space.
 P.10: Prefer immutable data to mutable data.
-<<<<<<< HEAD
 P.11: Encapsulate messy constructs, rather than spreading through code.
-=======
-P.11: Encapsulate messy constructs, rather than spreading through the code.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 P.12: Use supporting tools as appropriate.
 P.13: Use support libraries as appropriate.
 
@@ -728,7 +638,6 @@ I.5: State preconditions (if any).
 I.6: Prefer Expects() for expressing preconditions.
 I.7: State postconditions.
 I.8: Prefer Ensures() for expressing postconditions.
-<<<<<<< HEAD
 I.9: If interface is template, document its parameters using concepts.
 I.10: Use exceptions to signal failure to perform required task.
 I.11: Never transfer ownership by raw pointer (T*) or reference (T&).
@@ -740,34 +649,14 @@ I.24: Avoid adjacent parameters of same type when changing argument order would 
 I.25: Prefer abstract classes as interfaces to class hierarchies.
 I.26: If you want cross-compiler ABI, use C-style subset.
 I.27: For stable library ABI, consider Pimpl idiom.
-=======
-I.9: If an interface is a template, document its parameters using concepts.
-I.10: Use exceptions to signal a failure to perform a required task.
-I.11: Never transfer ownership by a raw pointer (T*) or reference (T&).
-I.12: Declare a pointer that must not be null as not_null.
-I.13: Do not pass an array as a single pointer.
-I.22: Avoid complex initialization of global objects.
-I.23: Keep the number of function arguments low.
-I.24: Avoid adjacent parameters of the same type when changing the argument order would change meaning.
-I.25: Prefer abstract classes as interfaces to class hierarchies.
-I.26: If you want a cross-compiler ABI, use a C-style subset.
-I.27: For stable library ABI, consider the Pimpl idiom.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 I.30: Encapsulate rule violations.
 
 *Functions*
 F.1: “Package” meaningful operations as carefully named functions.
-<<<<<<< HEAD
 F.2: function should perform single logical operation.
 F.3: Keep functions short and simple.
 F.4: If function may have to be evaluated at compile time, declare it constexpr.
 F.5: If function is very small and time-critical, declare it inline.
-=======
-F.2: A function should perform a single logical operation.
-F.3: Keep functions short and simple.
-F.4: If a function may have to be evaluated at compile time, declare it constexpr.
-F.5: If a function is very small and time-critical, declare it inline.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 F.6: If your function may not throw, declare it noexcept.
 F.7: For general use, take T* or T& arguments rather than smart pointers.
 F.8: Prefer pure functions.
@@ -775,7 +664,6 @@ F.9: Unused parameters should be unnamed.
 F.15: Prefer simple and conventional ways of passing information.
 F.16: For “in” parameters, pass cheaply-copied types by value and others by reference to const.
 F.17: For “in-out” parameters, pass by reference to non-const.
-<<<<<<< HEAD
 F.18: For “will-move-from” parameters, pass by X&& and std::move parameter.
 F.19: For “forward” parameters, pass by TP&& and only std::forward parameter.
 F.20: For “out” output values, prefer return values to output parameters.
@@ -798,48 +686,16 @@ F.50: Use lambda when function won’t do (to capture local variables, or to wri
 F.51: Where there is choice, prefer default arguments over overloading.
 F.52: Prefer capturing by reference in lambdas that will be used locally, including passed to algorithms.
 F.53: Avoid capturing by reference in lambdas that will be used non-locally, including returned, stored on heap, or passed to another thread.
-=======
-F.18: For “will-move-from” parameters, pass by X&& and std::move the parameter.
-F.19: For “forward” parameters, pass by TP&& and only std::forward the parameter.
-F.20: For “out” output values, prefer return values to output parameters.
-F.21: To return multiple “out” values, prefer returning a struct or tuple
-F.60: Prefer T* over T& when “no argument” is a valid option.
-F.22: Use T* or owner<T*> to designate a single object.
-F.23: Use a not_null<T> to indicate that “null” is not a valid value.
-F.24: Use a span<T> or a span_p<T> to designate a half-open sequence.
-F.25: Use a zstring or a not_null<zstring> to designate a C-style string.
-F.26: Use a unique_ptr<T> to transfer ownership where a pointer is needed.
-F.27: Use a shared_ptr<T> to share ownership.
-F.42: Return a T* to indicate a position (only).
-F.43: Never (directly or indirectly) return a pointer or a reference to a local object.
-F.44: Return a T& when copy is undesirable and “returning no object” isn’t needed.
-F.45: Don’t return a T&&.
-F.46: int is the return type for main().
-F.47: Return T& from assignment operators.
-F.48: Don’t return std::move(local).
-F.50: Use a lambda when a function won’t do (to capture local variables, or to write a local function).
-F.51: Where there is a choice, prefer default arguments over overloading.
-F.52: Prefer capturing by reference in lambdas that will be used locally, including passed to algorithms.
-F.53: Avoid capturing by reference in lambdas that will be used non-locally, including returned, stored on the heap, or passed to another thread.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 F.54: If you capture this, capture all variables explicitly (no default capture).
 F.55: Don’t use va_arg arguments.
 
 *Classes and Class Hierarchies*
 C.1: Organize related data into structures (structs or classes).
-<<<<<<< HEAD
 C.2: Use class if class has invariant; use struct if data members can vary independently.
 C.3: Represent distinction between interface and implementation using class.
 C.4: Make function member only if it needs direct access to representation of class.
 C.5: Place helper functions in same namespace as class they support.
 C.7: Don’t define class or enum and declare variable of its type in same statement.
-=======
-C.2: Use class if the class has an invariant; use struct if the data members can vary independently.
-C.3: Represent the distinction between an interface and an implementation using a class.
-C.4: Make a function a member only if it needs direct access to the representation of a class.
-C.5: Place helper functions in the same namespace as the class they support.
-C.7: Don’t define a class or enum and declare a variable of its type in the same statement.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 C.8: Use class rather than struct if any member is non-public.
 C.9: Minimize exposure of members.
 C.10: Prefer concrete types over class hierarchies.
@@ -847,7 +703,6 @@ C.11: Make concrete types regular.
 C.20: If you can avoid defining any default operations, do.
 C.21: If you define or =delete any copy, move, or destructor function, define or =delete them all.
 C.22: Make default operations consistent.
-<<<<<<< HEAD
 C.30: Define destructor if class needs explicit action at object destruction.
 C.31: All resources acquired by class must be released by class’s destructor.
 C.32: If class has raw pointer (T*) or reference (T&), consider whether it might be owning.
@@ -922,82 +777,6 @@ C.149: Use unique_ptr or shared_ptr to avoid forgetting to delete objects create
 C.150: Use make_unique() to construct objects owned by unique_ptrs.
 C.151: Use make_shared() to construct objects owned by shared_ptrs.
 C.152: Never assign pointer to array of derived class objects to pointer to its base.
-=======
-C.30: Define a destructor if a class needs an explicit action at object destruction.
-C.31: All resources acquired by a class must be released by the class’s destructor.
-C.32: If a class has a raw pointer (T*) or reference (T&), consider whether it might be owning.
-C.33: If a class has an owning pointer member, define a destructor.
-C.35: A base class destructor should be either public and virtual, or protected and non-virtual.
-C.36: A destructor may not fail.
-C.37: Make destructors noexcept.
-C.40: Define a constructor if a class has an invariant.
-C.41: A constructor should create a fully initialized object.
-C.42: If a constructor cannot construct a valid object, throw an exception.
-C.43: Ensure that a copyable (value type) class has a default constructor.
-C.44: Prefer default constructors to be simple and non-throwing.
-C.45: Don’t define a default constructor that only initializes data members; use member initializers instead.
-C.46: By default, declare single-argument constructors explicit.
-C.47: Define and initialize member variables in the order of member declaration.
-C.48: Prefer in-class initializers to member initializers in constructors for constant initializers.
-C.49: Prefer initialization to assignment in constructors.
-C.50: Use a factory function if you need “virtual behavior” during initialization.
-C.51: Use delegating constructors to represent common actions for all constructors of a class.
-C.52: Use inheriting constructors to import constructors into a derived class that does not need further explicit initialization.
-C.60: Make copy assignment non-virtual, take the parameter by const&, and return by non-const&.
-C.61: A copy operation should copy.
-C.62: Make copy assignment safe for self-assignment.
-C.63: Make move assignment non-virtual, take the parameter by &&, and return by non-const&.
-C.64: A move operation should move and leave its source in a valid state.
-C.65: Make move assignment safe for self-assignment.
-C.66: Make move operations noexcept.
-C.67: A polymorphic class should suppress copying.
-C.80: Use =default if you have to be explicit about using the default semantics.
-C.81: Use =delete when you want to disable default behavior (without wanting an alternative).
-C.82: Don’t call virtual functions in constructors and destructors.
-C.83: For value-like types, consider providing a noexcept swap function.
-C.84: A swap may not fail.
-C.85: Make swap noexcept.
-C.86: Make == symmetric with respect of operand types and noexcept.
-C.87: Beware of == on base classes.
-C.89: Make a hash noexcept.
-C.90: Rely on constructors and assignment operators, not memset and memcpy.
-C.100: Follow the STL when defining a container.
-C.101: Give a container value semantics.
-C.102: Give a container move operations.
-C.103: Give a container an initializer list constructor.
-C.104: Give a container a default constructor that sets it to empty.
-C.109: If a resource handle has pointer semantics, provide * and ->.
-F.50: Use a lambda when a function won’t do (to capture local variables, or to write a local function).
-F.52: Prefer capturing by reference in lambdas that will be used locally, including passed to algorithms.
-F.53: Avoid capturing by reference in lambdas that will be used non-locally, including returned, stored on the heap, or passed to another thread.
-ES.28: Use lambdas for complex initialization, especially of const variables.
-C.120: Use class hierarchies to represent concepts with inherent hierarchical structure (only).
-C.121: If a base class is used as an interface, make it a pure abstract class.
-C.122: Use abstract classes as interfaces when complete separation of interface and implementation is needed.
-C.126: An abstract class typically doesn’t need a constructor.
-C.127: A class with a virtual function should have a virtual or protected destructor.
-C.128: Virtual functions should specify exactly one of virtual, override, or final.
-C.129: When designing a class hierarchy, distinguish between implementation inheritance and interface inheritance.
-C.130: For making deep copies of polymorphic classes prefer a virtual clone function instead of copy construction/assignment.
-C.131: Avoid trivial getters and setters.
-C.132: Don’t make a function virtual without reason.
-C.133: Avoid protected data.
-C.134: Ensure all non-const data members have the same access level.
-C.135: Use multiple inheritance to represent multiple distinct interfaces.
-C.136: Use multiple inheritance to represent the union of implementation attributes.
-C.137: Use virtual bases to avoid overly general base classes.
-C.138: Create an overload set for a derived class and its bases with using.
-C.139: Use final on classes sparingly.
-C.140: Do not provide different default arguments for a virtual function and an overrider.
-C.145: Access polymorphic objects through pointers and references.
-C.146: Use dynamic_cast where class hierarchy navigation is unavoidable.
-C.147: Use dynamic_cast to a reference type when failure to find the required class is considered an error.
-C.148: Use dynamic_cast to a pointer type when failure to find the required class is considered a valid alternative.
-C.149: Use unique_ptr or shared_ptr to avoid forgetting to delete objects created using new.
-C.150: Use make_unique() to construct objects owned by unique_ptrs.
-C.151: Use make_shared() to construct objects owned by shared_ptrs.
-C.152: Never assign a pointer to an array of derived class objects to a pointer to its base.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 C.153: Prefer virtual function to casting.
 C.160: Define operators primarily to mimic conventional usage.
 C.161: Use non-member functions for symmetric operators.
@@ -1005,7 +784,6 @@ C.162: Overload operations that are roughly equivalent.
 C.163: Overload only for operations that are roughly equivalent.
 C.164: Avoid implicit conversion operators.
 C.165: Use using for customization points.
-<<<<<<< HEAD
 C.166: Overload unary & only as part of system of smart pointers and references.
 C.167: Use operator for operation with its conventional meaning.
 C.168: Define overloaded operators in namespace of their operands.
@@ -1014,16 +792,6 @@ C.180: Use unions to save Memory.
 C.181: Avoid “naked” unions.
 C.182: Use anonymous unions to implement tagged unions.
 C.183: Don’t use union for type punning.
-=======
-C.166: Overload unary & only as part of a system of smart pointers and references.
-C.167: Use an operator for an operation with its conventional meaning.
-C.168: Define overloaded operators in the namespace of their operands.
-C.170: If you feel like overloading a lambda, use a generic lambda.
-C.180: Use unions to save Memory.
-C.181: Avoid “naked” unions.
-C.182: Use anonymous unions to implement tagged unions.
-C.183: Don’t use a union for type punning.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 
 *Enumerations*
 Enum.1: Prefer enumerations over macros.
@@ -1032,34 +800,20 @@ Enum.3: Prefer enum classes over “plain” enums.
 Enum.4: Define operations on enumerations for safe and simple use.
 Enum.5: Don’t use ALL_CAPS for enumerators.
 Enum.6: Avoid unnamed enumerations.
-<<<<<<< HEAD
 Enum.7: Specify underlying type of enumeration only when necessary.
-=======
-Enum.7: Specify the underlying type of an enumeration only when necessary.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 Enum.8: Specify enumerator values only when necessary.
 
 *Resource Management*
 R.1: Manage resources automatically using resource handles and RAII (Resource Acquisition Is Initialization).
 R.2: In interfaces, use raw pointers to denote individual objects (only).
-<<<<<<< HEAD
 R.3: raw pointer (a T*) is non-owning.
 R.4: raw reference (a T&) is non-owning.
-=======
-R.3: A raw pointer (a T*) is non-owning.
-R.4: A raw reference (a T&) is non-owning.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 R.5: Prefer scoped objects, don’t heap-allocate unnecessarily.
 R.6: Avoid non-const global variables.
 R.10: Avoid malloc() and free().
 R.11: Avoid calling new and delete explicitly.
-<<<<<<< HEAD
 R.12: Immediately give result of explicit resource allocation to manager object.
 R.13: Perform at most one explicit resource allocation in single expression statement.
-=======
-R.12: Immediately give the result of an explicit resource allocation to a manager object.
-R.13: Perform at most one explicit resource allocation in a single expression statement.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 R.14: Avoid [] parameters, prefer span.
 R.15: Always overload matched allocation/deallocation pairs.
 R.20: Use unique_ptr or shared_ptr to represent ownership.
@@ -1068,7 +822,6 @@ R.22: Use make_shared() to make shared_ptrs.
 R.23: Use make_unique() to make unique_ptrs.
 R.24: Use std::weak_ptr to break cycles of shared_ptrs.
 R.30: Take smart pointers as parameters only to explicitly express lifetime semantics.
-<<<<<<< HEAD
 R.31: If you have non-std smart pointers, follow basic pattern from std.
 R.32: Take unique_ptr<widget> parameter to express that function assumes ownership of widget.
 R.33: Take unique_ptr<widget>& parameter to express that function reseats widget.
@@ -1079,18 +832,6 @@ R.37: Do not pass pointer or reference obtained from aliased smart pointer.
 
 *Expressions and Statements*
 ES.1: Prefer standard library to other libraries and to “handcrafted code”.
-=======
-R.31: If you have non-std smart pointers, follow the basic pattern from std.
-R.32: Take a unique_ptr<widget> parameter to express that a function assumes ownership of a widget.
-R.33: Take a unique_ptr<widget>& parameter to express that a function reseats the widget.
-R.34: Take a shared_ptr<widget> parameter to express that a function is part owner.
-R.35: Take a shared_ptr<widget>& parameter to express that a function might reseat the shared pointer.
-R.36: Take a const shared_ptr<widget>& parameter to express that it might retain a reference count to the object ???.
-R.37: Do not pass a pointer or reference obtained from an aliased smart pointer.
-
-*Expressions and Statements*
-ES.1: Prefer the standard library to other libraries and to “handcrafted code”.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 ES.2: Prefer suitable abstractions to direct use of language features.
 ES.5: Keep scopes small.
 ES.6: Declare names in for-statement initializers and conditions to limit scope.
@@ -1100,7 +841,6 @@ ES.9: Avoid ALL_CAPS names.
 ES.10: Declare one name (only) per declaration.
 ES.11: Use auto to avoid redundant repetition of type names.
 ES.12: Do not reuse names in nested scopes.
-<<<<<<< HEAD
 ES.20: Always initialize object.
 ES.21: Don’t introduce variable (or constant) before you need to use it.
 ES.22: Don’t declare variable until you have value to initialize it with.
@@ -1109,26 +849,12 @@ ES.24: Use unique_ptr<T> to hold pointers.
 ES.25: Declare object const or constexpr unless you want to modify its value later on.
 ES.26: Don’t use variable for two unrelated purposes.
 ES.27: Use std::array or stack_array for arrays on stack.
-=======
-ES.20: Always initialize an object.
-ES.21: Don’t introduce a variable (or constant) before you need to use it.
-ES.22: Don’t declare a variable until you have a value to initialize it with.
-ES.23: Prefer the {}-initializer syntax.
-ES.24: Use a unique_ptr<T> to hold pointers.
-ES.25: Declare an object const or constexpr unless you want to modify its value later on.
-ES.26: Don’t use a variable for two unrelated purposes.
-ES.27: Use std::array or stack_array for arrays on the stack.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 ES.28: Use lambdas for complex initialization, especially of const variables.
 ES.30: Don’t use macros for program text manipulation.
 ES.31: Don’t use macros for constants or “functions”.
 ES.32: Use ALL_CAPS for all macro names.
 ES.33: If you must use macros, give them unique names.
-<<<<<<< HEAD
 ES.34: Don’t define (C-style) variadic function.
-=======
-ES.34: Don’t define a (C-style) variadic function.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 ES.40: Avoid complicated expressions.
 ES.41: If in doubt about operator precedence, parenthesize.
 ES.42: Keep use of pointers simple and straightforward.
@@ -1138,22 +864,14 @@ ES.45: Avoid “magic constants”; use symbolic constants.
 ES.46: Avoid narrowing conversions.
 ES.47: Use nullptr rather than 0 or NULL.
 ES.48: Avoid casts.
-<<<<<<< HEAD
 ES.49: If you must use cast, use named cast.
 ES.50: Don’t cast away const.
 ES.55: Avoid need for range checking.
 ES.56: Write std::move() only when you need to explicitly move object to another scope.
-=======
-ES.49: If you must use a cast, use a named cast.
-ES.50: Don’t cast away const.
-ES.55: Avoid the need for range checking.
-ES.56: Write std::move() only when you need to explicitly move an object to another scope.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 ES.60: Avoid new and delete outside resource management functions.
 ES.61: Delete arrays using delete[] and non-arrays using delete.
 ES.62: Don’t compare pointers into different arrays.
 ES.63: Don’t slice.
-<<<<<<< HEAD
 ES.64: Use T{e}notation for construction.
 ES.65: Don’t dereference invalid pointer.
 ES.70: Prefer switch-statement to if-statement when there is choice.
@@ -1169,23 +887,6 @@ ES.79: Use default to handle common cases (only).
 ES.84: Don’t try to declare local variable with no name.
 ES.85: Make empty statements visible.
 ES.86: Avoid modifying loop control variables inside body of raw for-loops.
-=======
-ES.64: Use the T{e}notation for construction.
-ES.65: Don’t dereference an invalid pointer.
-ES.70: Prefer a switch-statement to an if-statement when there is a choice.
-ES.71: Prefer a range-for-statement to a for-statement when there is a choice.
-ES.72: Prefer a for-statement to a while-statement when there is an obvious loop variable.
-ES.73: Prefer a while-statement to a for-statement when there is no obvious loop variable.
-ES.74: Prefer to declare a loop variable in the initializer part of a for-statement.
-ES.75: Avoid do-statements.
-ES.76: Avoid goto.
-ES.77: Minimize the use of break and continue in loops.
-ES.78: Don’t rely on implicit fallthrough in switch statements.
-ES.79: Use default to handle common cases (only).
-ES.84: Don’t try to declare a local variable with no name.
-ES.85: Make empty statements visible.
-ES.86: Avoid modifying loop control variables inside the body of raw for-loops.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 ES.87: Don’t add redundant == or != to conditions.
 ES.100: Don’t mix signed and unsigned arithmetic.
 ES.101: Use unsigned types for bit manipulation.
@@ -1204,7 +905,6 @@ Per.4: Don’t assume that complicated code is necessarily faster than simple co
 Per.5: Don’t assume that low-level code is necessarily faster than high-level code.
 Per.6: Don’t make claims about performance without measurements.
 Per.7: Design to enable optimization.
-<<<<<<< HEAD
 Per.10: Rely on static type system.
 Per.11: Move computation from run time to compile time.
 Per.12: Eliminate redundant aliases.
@@ -1219,22 +919,6 @@ Per.30: Avoid context switches on critical path.
 
 *Concurrency and Parallelism*
 CP.1: Assume that your code will run as part of multi-threaded program.
-=======
-Per.10: Rely on the static type system.
-Per.11: Move computation from run time to compile time.
-Per.12: Eliminate redundant aliases.
-Per.13: Eliminate redundant indirections.
-Per.14: Minimize the number of allocations and deallocations.
-Per.15: Do not allocate on a critical branch.
-Per.16: Use compact data structures.
-Per.17: Declare the most used member of a time-critical struct first.
-Per.18: Space is time.
-Per.19: Access memory predictably.
-Per.30: Avoid context switches on the critical path.
-
-*Concurrency and Parallelism*
-CP.1: Assume that your code will run as part of a multi-threaded program.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 CP.2: Avoid data races.
 CP.3: Minimize explicit sharing of writable data.
 CP.4: Think in terms of tasks, rather than threads.
@@ -1242,24 +926,15 @@ CP.8: Don’t try to use volatile for synchronization.
 CP.9: Whenever feasible use tools to validate your concurrent code.
 CP.20: Use RAII, never plain lock()/unlock()
 CP.21: Use std::lock() or std::scoped_lock to acquire multiple mutexes
-<<<<<<< HEAD
 CP.22: Never call unknown code while holding lock (e.g., callback)
 CP.23: Think of joining thread as scoped container
 CP.24: Think of thread as global container
 CP.25: Prefer gsl::joining_thread over std::thread
 CP.26: Don’t detach() thread
-=======
-CP.22: Never call unknown code while holding a lock (e.g., a callback)
-CP.23: Think of a joining thread as a scoped container
-CP.24: Think of a thread as a global container
-CP.25: Prefer gsl::joining_thread over std::thread
-CP.26: Don’t detach() a thread
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 CP.31: Pass small amounts of data between threads by value, rather than by reference or pointer
 CP.32: To share ownership between unrelated threads use shared_ptr
 CP.40: Minimize context switching
 CP.41: Minimize thread creation and destruction
-<<<<<<< HEAD
 CP.42: Don’t wait without condition
 CP.43: Minimize time spent in critical section
 CP.44: Remember to name your lock_guards and unique_locks
@@ -1290,38 +965,6 @@ E.16: Destructors, deallocation, and swap must never fail.
 E.17: Don’t try to catch every exception in every function.
 E.18: Minimize use of explicit try/catch.
 E.19: Use final_action object to express cleanup if no suitable resource handle is available.
-=======
-CP.42: Don’t wait without a condition
-CP.43: Minimize time spent in a critical section
-CP.44: Remember to name your lock_guards and unique_locks
-CP.50: Define a mutex together with the data it guards. Use synchronized_value<T> where possible
-CP.60: Use a future to return a value from a concurrent task
-CP.61: Use async() to spawn concurrent tasks
-CP.100: Don’t use lock-free programming unless you absolutely have to
-CP.101: Distrust your hardware/compiler combination
-CP.102: Carefully study the literature how/when to use atomics
-CP.110: Do not write your own double-checked locking for initialization
-CP.111: Use a conventional pattern if you really need double-checked locking
-CP.200: Use volatile only to talk to non-C++ memory
-
-*Error Handling*
-E.1: Develop an error-handling strategy early in a design.
-E.2: Throw an exception to signal that a function can’t perform its assigned task.
-E.3: Use exceptions for error handling only.
-E.4: Design your error-handling strategy around invariants.
-E.5: Let a constructor establish an invariant, and throw if it cannot.
-E.6: Use RAII to prevent leaks.
-E.7: State your preconditions.
-E.8: State your postconditions.
-E.12: Use noexcept when exiting a function because of a throw is impossible or unacceptable.
-E.13: Never throw while being the direct owner of an object.
-E.14: Use purpose-designed user-defined types as exceptions (not built-in types).
-E.15: Catch exceptions from a hierarchy by reference.
-E.16: Destructors, deallocation, and swap must never fail.
-E.17: Don’t try to catch every exception in every function.
-E.18: Minimize the use of explicit try/catch.
-E.19: Use a final_action object to express cleanup if no suitable resource handle is available.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 E.25: If you can’t throw exceptions, simulate RAII for resource management.
 E.26: If you can’t throw exceptions, consider failing fast.
 E.27: If you can’t throw exceptions, use error codes systematically.
@@ -1337,11 +980,7 @@ Con.4: Use const to define objects with values that do not change after construc
 Con.5: Use constexpr for values that can be computed at compile time.
 
 *Templates and Generic Programming*
-<<<<<<< HEAD
 T.1: Use templates to raise level of abstraction of code.
-=======
-T.1: Use templates to raise the level of abstraction of code.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 T.2: Use templates to express algorithms that apply to many argument types.
 T.3: Use templates to express containers and ranges.
 T.4: Use templates to express syntax tree manipulation.
@@ -1349,7 +988,6 @@ T.5: Combine generic and OO techniques to amplify their strengths, not their cos
 T.10: Specify concepts for all template arguments.
 T.11: Whenever possible use standard concepts.
 T.12: Prefer concept names over auto for local variables.
-<<<<<<< HEAD
 T.13: Prefer shorthand notation for simple, single-type argument concepts.
 T.20: Avoid “concepts” without meaningful semantics.
 T.21: Require complete set of operations for concept.
@@ -1362,20 +1000,6 @@ T.30: Use concept negation (!C<T>) sparingly to express minor difference.
 T.31: Use concept disjunction (C1<T> || C2<T>) sparingly to express alternatives.
 T.40: Use function objects to pass operations to algorithms.
 T.41: Require only essential properties in template’s concepts.
-=======
-T.13: Prefer the shorthand notation for simple, single-type argument concepts.
-T.20: Avoid “concepts” without meaningful semantics.
-T.21: Require a complete set of operations for a concept.
-T.22: Specify axioms for concepts.
-T.23: Differentiate a refined concept from its more general case by adding new use patterns.
-T.24: Use tag classes or traits to differentiate concepts that differ only in semantics.
-T.25: Avoid complementary constraints.
-T.26: Prefer to define concepts in terms of use-patterns rather than simple syntax.
-T.30: Use concept negation (!C<T>) sparingly to express a minor difference.
-T.31: Use concept disjunction (C1<T> || C2<T>) sparingly to express alternatives.
-T.40: Use function objects to pass operations to algorithms.
-T.41: Require only essential properties in a template’s concepts.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 T.42: Use template aliases to simplify notation and hide implementation details.
 T.43: Prefer using over typedef for defining aliases.
 T.44: Use function templates to deduce class template argument types (where feasible).
@@ -1383,20 +1007,13 @@ T.46: Require template arguments to be at least Regular or SemiRegular.
 T.47: Avoid highly visible unconstrained templates with common names.
 T.48: If your compiler does not support concepts, fake them with enable_if.
 T.49: Where possible, avoid type-erasure.
-<<<<<<< HEAD
 T.60: Minimize template’s context dependencies.
 T.61: Do not over-parameterize members (SCARY).
 T.62: Place non-dependent class template members in non-templated base class.
-=======
-T.60: Minimize a template’s context dependencies.
-T.61: Do not over-parameterize members (SCARY).
-T.62: Place non-dependent class template members in a non-templated base class.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 T.64: Use specialization to provide alternative implementations of class templates.
 T.65: Use tag dispatch to provide alternative implementations of functions.
 T.67: Use specialization to provide alternative implementations for irregular types.
 T.68: Use {} rather than () within templates to avoid ambiguities.
-<<<<<<< HEAD
 T.69: Inside template, don’t make unqualified non-member function call unless you intend it to be customization point.
 T.80: Do not naively templatize class hierarchy.
 T.81: Do not mix hierarchies and arrays // ??? somewhere in “hierarchies”.
@@ -1406,24 +1023,12 @@ T.84: Use non-template core implementation to provide ABI-stable interface.
 T.100: Use variadic templates when you need function that takes variable number of arguments of variety of types.
 T.101: How to pass arguments to variadic template ???.
 T.102: How to process arguments to variadic template ???.
-=======
-T.69: Inside a template, don’t make an unqualified non-member function call unless you intend it to be a customization point.
-T.80: Do not naively templatize a class hierarchy.
-T.81: Do not mix hierarchies and arrays // ??? somewhere in “hierarchies”.
-T.82: Linearize a hierarchy when virtual functions are undesirable.
-T.83: Do not declare a member function template virtual.
-T.84: Use a non-template core implementation to provide an ABI-stable interface.
-T.100: Use variadic templates when you need a function that takes a variable number of arguments of a variety of types.
-T.101: How to pass arguments to a variadic template ???.
-T.102: How to process arguments to a variadic template ???.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 T.103: Don’t use variadic templates for homogeneous argument lists.
 T.120: Use template metaprogramming only when you really need to.
 T.121: Use template metaprogramming primarily to emulate concepts.
 T.122: Use templates (usually template aliases) to compute types at compile time.
 T.123: Use constexpr functions to compute values at compile time.
 T.124: Prefer to use standard-library TMP facilities.
-<<<<<<< HEAD
 T.125: If you need to go beyond standard-library TMP facilities, use existing library.
 T.140: Name all operations with potential for reuse.
 T.141: Use unnamed lambda if you need simple function object in one place only.
@@ -1445,34 +1050,10 @@ SF.4: Include .h files before other declarations in file.
 SF.5: .cpp file must include .h file(s) that defines its interface.
 SF.6: Use using namespace directives for transition, for foundation libraries (such as std), or within local scope (only).
 SF.7: Don’t write using namespace at global scope in header file.
-=======
-T.125: If you need to go beyond the standard-library TMP facilities, use an existing library.
-T.140: Name all operations with potential for reuse.
-T.141: Use an unnamed lambda if you need a simple function object in one place only.
-T.142: Use template variables to simplify notation.
-T.143: Don’t write unintentionally non-generic code.
-T.144: Don’t specialize function templates.
-T.150: Check that a class matches a concept using static_assert.
-
-*C-Style Programming*
-CPL.1: Prefer C++ to C.
-CPL.2: If you must use C, use the common subset of C and C++, and compile the C code as C++.
-CPL.3: If you must use C for interfaces, use C++ in the calling code using such interfaces.
-
-*Source Files*
-SF.1: Use a .cpp suffix for code files and .h for interface files if your project doesn’t already follow another convention.
-SF.2: A .h file may not contain object definitions or non-inline function definitions.
-SF.3: Use .h files for all declarations used in multiple source files.
-SF.4: Include .h files before other declarations in a file.
-SF.5: A .cpp file must include the .h file(s) that defines its interface.
-SF.6: Use using namespace directives for transition, for foundation libraries (such as std), or within a local scope (only).
-SF.7: Don’t write using namespace at global scope in a header file.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 SF.8: Use #include guards for all .h files.
 SF.9: Avoid cyclic dependencies among source files.
 SF.10: Avoid dependencies on implicitly #included names.
 SF.11: Header files should be self-contained.
-<<<<<<< HEAD
 SF.12: Prefer quoted form of #include for files relative to including file and angle bracket form everywhere else.
 SF.20: Use namespaces to express logical structure.
 SF.21: Don’t use unnamed (anonymous) namespace in header.
@@ -1485,39 +1066,16 @@ SL.3: Do not add non-standard entities to namespace std.
 SL.4: Use standard library in type-safe manner.
 SL.con.1: Prefer using STL array or vector instead of C array.
 SL.con.2: Prefer using STL vector by default unless you have reason to use different container.
-=======
-SF.12: Prefer the quoted form of #include for files relative to the including file and the angle bracket form everywhere else.
-SF.20: Use namespaces to express logical structure.
-SF.21: Don’t use an unnamed (anonymous) namespace in a header.
-SF.22: Use an unnamed (anonymous) namespace for all internal/non-exported entities.
-
-*Standard Library*
-SL.1: Use libraries wherever possible.
-SL.2: Prefer the standard library to other libraries.
-SL.3: Do not add non-standard entities to namespace std.
-SL.4: Use the standard library in a type-safe manner.
-SL.con.1: Prefer using STL array or vector instead of a C array.
-SL.con.2: Prefer using STL vector by default unless you have a reason to use a different container.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 SL.con.3: Avoid bounds errors.
 SL.con.4: don’t use memset or memcpy for arguments that are not trivially-copyable.
 SL.str.1: Use std::string to own character sequences.
 SL.str.2: Use std::string_view or gsl::string_span to refer to character sequences.
-<<<<<<< HEAD
 SL.str.3: Use zstring or czstring to refer to C-style, zero-terminated, sequence of characters.
 SL.str.4: Use char* to refer to single character.
 SL.str.5: Use std::byte to refer to byte values that do not necessarily represent characters.
 SL.str.10: Use std::string when you need to perform locale-sensitive string operations.
 SL.str.11: Use gsl::string_span rather than std::string_view when you need to mutate string.
 SL.str.12: Use s suffix for string literals meant to be standard-library strings.
-=======
-SL.str.3: Use zstring or czstring to refer to a C-style, zero-terminated, sequence of characters.
-SL.str.4: Use char* to refer to a single character.
-SL.str.5: Use std::byte to refer to byte values that do not necessarily represent characters.
-SL.str.10: Use std::string when you need to perform locale-sensitive string operations.
-SL.str.11: Use gsl::string_span rather than std::string_view when you need to mutate a string.
-SL.str.12: Use the s suffix for string literals meant to be standard-library strings.
->>>>>>> 9690301c96aecf34d860f83cc2a7ebedf31d907c
 SL.io.1: Use character-level input only when you have to.
 SL.io.2: When reading, always consider ill-formed input.
 SL.io.3: Prefer iostreams for I/O.
