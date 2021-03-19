@@ -40,6 +40,8 @@
 * Friend: function or class that is allowed to access to another class or function.
 * Full Expression: expression that is not subexpression of some other expression.
 * Function: entity that associates sequence of statements with name and required parameters.
+* Functionoid: 
+* Functor: 
 * Generic Programming: design of general algorithms implemented using templates.
 * Handle: technique that will uniquely identify and get to another object.
 * Has Identity: program has name of pointer or reference to object.
@@ -69,6 +71,7 @@
 * Movable: program allowed to move object value to another location and leave this object in valid but unspecified state.
 * Multiple Inheritance: deriving directly from more than one class.
 * Name: denotes entity is introduced into program by declaration. identifier, overloaded operator, user defined conversion function, user defined literal, template name.
+* Name Binding: process of finding declaration for each name explicitly or implicitly used in template.
 * Name Lookup: procedure by which name, when encountered in program, is associated with declaration that introduced it.
 * Named Constructor: provide public static methods that return object.
 * Named Requirements: used in normative text of C++ standard to define expectations of standard library.
@@ -155,11 +158,11 @@
 * Class
 
 [TYPE CONVERSIONS]
-* Function-Style: type(expression) (implicit type conversion.)
-* Run-Time Checked: dynamic_cast<type>(expression) (run-time checked conversion of pointers and references into class hierarchy.)
-* Compile-Time Checked: static_cast<type>(expression) (reversing well-defined implicit conversion. converts between related types such as one pointer type to another in same class hierarchy.)
-* Unchecked: reinterpret_cast<type>(expression) (changing meaning of bit patterns. handles conversions between unrelated types such as integer to pointer.)
-* Constant: const_cast<type>(expression) (getting write access to something declared const. converts between types that differ only in const and volatile qualifiers.)
+* Function-Style: type(expression). implicit type conversion.
+* Run-Time Checked: dynamic_cast<type>(expression). run-time checked conversion of pointers and references into class hierarchy.
+* Compile-Time Checked: static_cast<type>(expression). reversing well-defined implicit conversion. converts between related types such as one pointer type to another in same class hierarchy.
+* Unchecked: reinterpret_cast<type>(expression). changing meaning of bit patterns. handles conversions between unrelated types such as integer to pointer.
+* Constant: const_cast<type>(expression). getting write access to something declared const. converts between types that differ only in const and volatile qualifiers.
 
 [LEXICAL OPERATORS]
 * Type Identification: typeid(type/expression)
@@ -343,7 +346,6 @@
 * Utilities library
    - <cstdlib> General purpose utilities: program control, dynamic memory allocation, random numbers, sort and search.
    - <csignal> Functions and macro constants for signal management.
-   - <csetjmp> Macro (and function) that saves (and jumps) to execution context.
    - <csetjmp> Macro (and function) that saves (and jumps) to execution context.
    - <cstdarg> Handling of variable length argument lists.
    - <typeinfo> Runtime type information utilities.
@@ -548,12 +550,13 @@
 * it is typically bad idea to call virtual function from constructor or destructor.
 * interface virtual destructor ensures proper cleanup of data that will be defined in derived classes.
 * member template cannot be virtual.
+* do not attempt to cast pointer-to-member-function into pointer-to-function; result is undefined and probably disastrous.
 
 
 * Nifty Counter Idiom:
 * Return Value Optimization:
 
-[ISO CPP GUIDELINESS]
+[ISO C++ GUIDELINESS]
 *Philosophy*
 P.1: Express ideas directly in code.
 P.2: Write in ISO Standard C++.
@@ -1007,7 +1010,7 @@ SL.4: Use standard library in type-safe manner.
 SL.con.1: Prefer using STL array or vector instead of C array.
 SL.con.2: Prefer using STL vector by default unless you have reason to use different container.
 SL.con.3: Avoid bounds errors.
-SL.con.4: don’t use memset or memcpy for arguments that are not trivially-copyable.
+SL.con.4: Don’t use memset or memcpy for arguments that are not trivially-copyable.
 SL.str.1: Use std::string to own character sequences.
 SL.str.2: Use std::string_view or gsl::string_span to refer to character sequences.
 SL.str.3: Use zstring or czstring to refer to C-style, zero-terminated, sequence of characters.

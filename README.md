@@ -68,3 +68,6 @@
 - 62-Visitors
 - 63-DefaultFunctionTemplateArguments
 - 64-TemplateSpecialization
+- 65-PointerToMemberFunction
+- 66-Functionoid
+- 67-Functor
