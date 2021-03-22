@@ -67,6 +67,8 @@
 * Literal Type: class with constexpr constructor.
 * LValue: expression that refers to object. something that can be on left-hand side of assignment.
 * Memory Model: defines semantics of computer memory storage for purpose of abstract machine.
+* Metaprogram: is compile-time computation yielding types or functions to be used at run time.
+* Metaprogramming: programming that manipulates program entities, such as classes and functions.
 * Module: helps dividing large amounts of code into logical parts.
 * Movable: program allowed to move object value to another location and leave this object in valid but unspecified state.
 * Multiple Inheritance: deriving directly from more than one class.
@@ -90,6 +92,7 @@
 * Pointer: points to object represents address of first byte in memory occupied by object.
 * Postcondition: condition that must always be true just after execution of code.
 * Precondition: condition that must always be true just prior to execution of code.
+* Predicate: function that returns boolean value.
 * Prefix: affix which is placed before stem of word.
 * Preprocessor: preprocessing directives control behavior of preprocessor that is executed at translation phase 4.
 * Promotion: implicit conversion that preserve values.
@@ -116,10 +119,12 @@
 * Template Instantiation: process of generating class or function from template plus template argument list.
 * Template Metaprogramming: focuses more on generative techniques (seeing templates as type and function generators) and relying on type functions to express compile-time computation.
 * Template Specialization: version of template for specific template argument list.
+* Trait: used to associate properties with type.
 * Translation Unit: unit is what compiler proper works on and what C++ language rules describe.
 * Trivial Type: type that has trivial default constructor, copy and move operations. trivial means no need to do work.
 * Trivially Copyable Type: type that has nontrivial copy operation, move operation, or destructor. can be implemented as bitwise copy.
 * Type: restricts operations that are permitted for specific entities and provides semantic meaning otherwise generic sequences of bits.
+* Type Function: is function that either takes at least one type argument or produces at least one type as result. example: sizeof.
 * Type Traits: defines compile-time template-based interface to query or modify properties of types.
 * Undefined Behaviour: renders entire program meaningless if certain rules of language are violated.
 * Union: struct in which all members are allocated at same address so that it occupies only as much space as its largest member.
