@@ -85,6 +85,7 @@
 * Operator: defines type of operation between operands.
 * Overloading: using same name for operations on different types is called overloading.
 * Override: function from derived class with same name and same set of argument types as virtual function in base.
+* Parameter Pack: sequence of (type/value) pairs from which you can peel off arguments starting with first.
 * Parameterized Type: type that is parameterized over another type or some value. class template or genericity.
 * Per-Object-Data: any given object of class can instantiate different conformal (same type) member object upon initialization (wrapper), and exact class of member object is static property of object that wraps it.
 * PIMPL: pointer to implementation.
