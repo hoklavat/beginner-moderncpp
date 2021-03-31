@@ -1,11 +1,11 @@
 ﻿*** MODERN CPP ***
 
 [CONCEPTS]
-* Abstract Class: no objects of class can be directly created.
+* Abstract Class: no objects of class can be directly created. interface is decoupled from representation.
 * Alignment: bytes used to hold object must have proper alignment for hardware to access it efficiently.
 * Argument Dependent Lookup: if function isn’t found in context of its use, it is looked in namespaces of its arguments.
 * As If Rule: allowing any code transformations that do not change observable behavior of program.
-* Assertion: condition connected to point in program, that always should evaluate to true at that point in code execution.
+* Assertion: condition connected to point in program, that always should evaluate to true at that point in code execution. compile-time static assertion, run-time exception.
 * Block: block is section of code delimited by {} pair.
 * Casting: explicit type conversion.
 * Class: user-defined type that can have data member, member function, nested types, enumerators, member templates.
@@ -42,6 +42,7 @@
 * Function: entity that associates sequence of statements with name and required parameters.
 * Functionoid: 
 * Functor: 
+* Garbage Collection: global memory management scheme.
 * Generic Programming: design of general algorithms implemented using templates.
 * Handle: technique that will uniquely identify and get to another object.
 * Has Identity: program has name of pointer or reference to object.
@@ -73,6 +74,7 @@
 * Movable: program allowed to move object value to another location and leave this object in valid but unspecified state.
 * Multiple Inheritance: deriving directly from more than one class.
 * Name: denotes entity is introduced into program by declaration. identifier, overloaded operator, user defined conversion function, user defined literal, template name.
+* Namespace: represents logical structure of part of program.
 * Name Binding: process of finding declaration for each name explicitly or implicitly used in template.
 * Name Lookup: procedure by which name, when encountered in program, is associated with declaration that introduced it.
 * Named Constructor: provide public static methods that return object.
@@ -98,8 +100,9 @@
 * Preprocessor: preprocessing directives control behavior of preprocessor that is executed at translation phase 4.
 * Promotion: implicit conversion that preserve values.
 * Pure Virtual Function: function that must be overridden in derived class and need not be defined.
-* RAII: Resource Acquisition Is Initialization. when object is constructed on free store, its pointer placed into manager object with destructor that will destroy it. avoids resource leaks and makes exception error handling simple.
+* Resource Acquisition Is Initialization: RAII. when object is constructed on free store, its pointer placed into manager object with destructor that will destroy it. avoids resource leaks and makes exception error handling simple.
 * Reference: alias for object that is usually implemented to hold machine address of object. alternative name for object. lvalue/const/rvalue references.
+* Resource: anything that has to be acquired and released after use.
 * Rule of Five: if class has destructor that performs nontrivial task, such as free-store deallocation or lock release, class is likely to need full complement of functions: constructor, copy constructor/assignment, move constructor/assignment.
 * RValue: value that is not lvalue. rvalue(m), prvalue
 * Scope: each name is valid in discontiguous portion of source code called its scope.
@@ -130,8 +133,10 @@
 * Undefined Behaviour: renders entire program meaningless if certain rules of language are violated.
 * Union: struct in which all members are allocated at same address so that it occupies only as much space as its largest member.
 * Upcast: cast from derived class to base class.
+* Value: set of bits interpreted according to type.
 * Variable: declared objects and declared references that are not non-static data members.
 * Variadic Template: allows to handle arbitrary number of arbitrary types.
+* Virtual Function: may be redefined in derived class.
 * Virtual Constructor: function that indirectly construct objects.
 * Virtual Data: definition of member object of class is overridable in derived classes, provided its declaration type remains same, and this overriddenness is static property of derived class.
 * Virtual Table: data structure for classes that have virtual functions to handle dynamic binding.
@@ -557,13 +562,23 @@
 * interface virtual destructor ensures proper cleanup of data that will be defined in derived classes.
 * member template cannot be virtual.
 * do not attempt to cast pointer-to-member-function into pointer-to-function; result is undefined and probably disastrous.
-
+* focus on programming techniques, not on language features.
+* prefer  {} syntax for declarations with named type.
+* prefer = syntax for initialization in declarations using auto.
+* don’t put a using-directive in a header file.
+* use purpose-designed user-defined types as exceptions (not built-in types).
+* let constructor establish  invariant, and throw if it cannot.
+* design error-handling strategy around invariants.
+* avoiding naked new and naked delete makes code far less error-prone and far easier to keep free of resource leaks.
+* delete default copy and move operations in base class.
+* class with virtual function should have virtual destructor.
+* by default, declare single-argument constructors explicit.
 
 * Nifty Counter Idiom:
 * Return Value Optimization:
 
 [ISO C++ GUIDELINESS]
-*Philosophy*
+*PHILOSOPHY*
 P.1: Express ideas directly in code.
 P.2: Write in ISO Standard C++.
 P.3: Express intent.
@@ -578,7 +593,7 @@ P.11: Encapsulate messy constructs, rather than spreading through code.
 P.12: Use supporting tools as appropriate.
 P.13: Use support libraries as appropriate.
 
-*Interfaces*
+*INTERFACES*
 I.1: Make interfaces explicit.
 I.2: Avoid non-const global variables.
 I.3: Avoid singletons.
@@ -637,7 +652,7 @@ F.52: Prefer capturing by reference in lambdas that will be used locally, includ
 F.53: Avoid capturing by reference in lambdas that will be used non-locally, including returned, stored on heap, or passed to another thread.
 F.54: If you capture this, capture all variables explicitly (no default capture).
 F.55: Don’t use va_arg arguments.
-
+>>----------------------------------------------------------<<
 *Classes and Class Hierarchies*
 C.1: Organize related data into structures (structs or classes).
 C.2: Use class if class has invariant; use struct if data members can vary independently.
