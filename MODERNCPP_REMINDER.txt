@@ -41,7 +41,7 @@
 * Full Expression: expression that is not subexpression of some other expression.
 * Function: entity that associates sequence of statements with name and required parameters.
 * Functionoid: 
-* Functor: 
+* Functor: function object used to define objects that can be called like functions.
 * Garbage Collection: global memory management scheme.
 * Generic Programming: design of general algorithms implemented using templates.
 * Handle: technique that will uniquely identify and get to another object.
@@ -93,6 +93,7 @@
 * PIMPL: pointer to implementation.
 * Plain Old Data: POD. contiguous sequence of bytes in memory. raw data. allows block operations.
 * Pointer: points to object represents address of first byte in memory occupied by object.
+* Policy Object: function objects used to specify meaning of key operations of general algorithm.
 * Postcondition: condition that must always be true just after execution of code.
 * Precondition: condition that must always be true just prior to execution of code.
 * Predicate: function that returns boolean value.
@@ -100,6 +101,7 @@
 * Preprocessor: preprocessing directives control behavior of preprocessor that is executed at translation phase 4.
 * Promotion: implicit conversion that preserve values.
 * Pure Virtual Function: function that must be overridden in derived class and need not be defined.
+* Regular Type: default constructible, copiable, comparable(==, !=), 
 * Resource Acquisition Is Initialization: RAII. when object is constructed on free store, its pointer placed into manager object with destructor that will destroy it. avoids resource leaks and makes exception error handling simple.
 * Reference: alias for object that is usually implemented to hold machine address of object. alternative name for object. lvalue/const/rvalue references.
 * Resource: anything that has to be acquired and released after use.
@@ -119,7 +121,7 @@
 * Structure: aggregate of elements of arbitrary types.
 * Suffix: affix which is placed after stem of word.
 * Syntax Analysis: Parsing. set of rules, principles and processes that govern structure of sentences in language. takes input from lexical analyzer in form of token streams and analyzes them for errors.
-* Template: mechanism that allows type or value to be parameter in definition of class, function, or type alias.
+* Template: compile-time mechanism that allows type or value to be parameter in definition of class, function, or type alias.
 * Template Instantiation: process of generating class or function from template plus template argument list.
 * Template Metaprogramming: focuses more on generative techniques (seeing templates as type and function generators) and relying on type functions to express compile-time computation.
 * Template Specialization: version of template for specific template argument list.

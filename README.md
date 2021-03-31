@@ -71,3 +71,6 @@
 - 65-PointerToMemberFunction
 - 66-Functionoid
 - 67-Functor
+- 68-TypePredicate
+- 69-TypeSelection
+- 70-VariadicTemplate
