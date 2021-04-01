@@ -292,7 +292,6 @@
 
 [NAMES]
 * name is use of one of following to refer to entity or to label;
-* name is use of one of following to refer to entity or to label;
    - identifier,
    - overloaded operator name in function notation,
    - user-defined conversion function name,
@@ -344,7 +343,7 @@
 * Thread Local Objects: created when their thread is start and destroyed when their thread is end.
 
 [PROGRAM TERMINATION]
-* return form main()
+* return from main()
 * calling exit()
 * calling abort()
 * throwing uncaught exception
